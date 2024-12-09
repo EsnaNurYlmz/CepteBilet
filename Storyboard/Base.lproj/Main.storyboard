@@ -90,18 +90,73 @@
         <!--Profil-->
         <scene sceneID="x1I-KQ-v8G">
             <objects>
-                <viewController id="ClN-h7-LeA" sceneMemberID="viewController">
+                <viewController id="ClN-h7-LeA" customClass="ProfileViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eKA-zp-zMF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0NQ-sZ-s8J">
+                                <rect key="frame" x="0.0" y="59" width="393" height="211"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-w5-Xyp">
+                                <rect key="frame" x="0.0" y="270" width="393" height="499"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" systemColor="tableCellBlueTextColor"/>
+                                <color key="sectionIndexTrackingBackgroundColor" systemColor="tableCellBlueTextColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCategoryCell" id="FYe-EF-puN" customClass="ProfileCategoryTableViewCell" customModule="CepteBilet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYe-EF-puN" id="sw3-i9-s9W">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-vZ-2Z3">
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="27.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                                    <color key="textColor" systemColor="tableCellBlueTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" systemColor="tableCellBlueTextColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="tintColor" systemColor="tableCellBlueTextColor"/>
+                                            <constraints>
+                                                <constraint firstItem="a43-vZ-2Z3" firstAttribute="leading" secondItem="sw3-i9-s9W" secondAttribute="leadingMargin" id="YIu-yd-pFe"/>
+                                                <constraint firstItem="a43-vZ-2Z3" firstAttribute="top" secondItem="sw3-i9-s9W" secondAttribute="topMargin" id="bJO-n8-dsy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="a43-vZ-2Z3" secondAttribute="trailing" id="bcV-Cm-Ora"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="a43-vZ-2Z3" secondAttribute="bottom" constant="0.67000000000000004" id="rHH-N8-3zS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" systemColor="tableCellBlueTextColor"/>
+                                        <connections>
+                                            <outlet property="ProfileCategoryLabel" destination="a43-vZ-2Z3" id="GAS-D1-Sr6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LQb-4l-jxJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LQb-4l-jxJ" firstAttribute="bottom" secondItem="rM7-w5-Xyp" secondAttribute="bottom" id="0l9-tE-YT0"/>
+                            <constraint firstItem="0NQ-sZ-s8J" firstAttribute="top" secondItem="LQb-4l-jxJ" secondAttribute="top" id="Ebg-9D-JDJ"/>
+                            <constraint firstItem="LQb-4l-jxJ" firstAttribute="trailing" secondItem="0NQ-sZ-s8J" secondAttribute="trailing" id="FpY-HW-74A"/>
+                            <constraint firstItem="rM7-w5-Xyp" firstAttribute="top" secondItem="0NQ-sZ-s8J" secondAttribute="bottom" id="aNz-qU-fhy"/>
+                            <constraint firstItem="LQb-4l-jxJ" firstAttribute="bottom" secondItem="0NQ-sZ-s8J" secondAttribute="bottom" constant="499" id="cRu-1Y-Fxu"/>
+                            <constraint firstItem="LQb-4l-jxJ" firstAttribute="trailing" secondItem="rM7-w5-Xyp" secondAttribute="trailing" id="lKb-mt-50q"/>
+                            <constraint firstItem="0NQ-sZ-s8J" firstAttribute="leading" secondItem="LQb-4l-jxJ" secondAttribute="leading" id="nXD-mA-TOs"/>
+                            <constraint firstItem="rM7-w5-Xyp" firstAttribute="leading" secondItem="LQb-4l-jxJ" secondAttribute="leading" id="pbd-tt-ukt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profil" image="person.circle" catalog="system" id="HNh-Ou-lSr"/>
+                    <connections>
+                        <outlet property="ProfileCategoryTableView" destination="rM7-w5-Xyp" id="k2t-ZW-kJR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPk-ig-Ha4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3634" y="218"/>
+            <point key="canvasLocation" x="3632.8244274809158" y="217.60563380281693"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WG4-Js-ivs">
@@ -130,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="500" height="500"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
@@ -137,6 +193,9 @@
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
