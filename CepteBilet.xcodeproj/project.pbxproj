@@ -15,6 +15,7 @@
 		C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */; };
 		C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0062D071CDB0060AC86 /* LoginViewController.swift */; };
 		C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0082D07200F0060AC86 /* SignUpViewController.swift */; };
+		C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */; };
 		C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C68CE0062D071CDB0060AC86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C68CE0082D07200F0060AC86 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
 		C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */,
 				C68CE0062D071CDB0060AC86 /* LoginViewController.swift */,
 				C68CE0082D07200F0060AC86 /* SignUpViewController.swift */,
+				C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */,
 				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,
+				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
 				C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */,
 				C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */,
 				C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */,

@@ -228,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWv-eg-UWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5631" y="-82"/>
+            <point key="canvasLocation" x="5634" y="-82"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
@@ -364,6 +364,159 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPk-ig-Ha4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3632.8244274809158" y="217.60563380281693"/>
+        </scene>
+        <!--Profile Update View Controller-->
+        <scene sceneID="VYO-Vl-usU">
+            <objects>
+                <viewController id="636-EM-fST" customClass="ProfileUpdateViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="plk-Ga-ful">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil Güncelleme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz8-bM-9IJ">
+                                <rect key="frame" x="0.0" y="69" width="393" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="tableCellBlueTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Lp-CP-hLj">
+                                <rect key="frame" x="10" y="113" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Soyad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2MV-Kd-B5s">
+                                <rect key="frame" x="10" y="157" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doğum Tarihi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-Dx-pAe">
+                                <rect key="frame" x="10" y="201" width="169" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cinsiyet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9G7-jn-53a">
+                                <rect key="frame" x="217" y="201" width="166" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="ly2-TX-Hvy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ülke Kodu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-nA-1L1">
+                                <rect key="frame" x="10" y="245" width="104" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefon Numarası" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjx-Zc-jdn">
+                                <rect key="frame" x="137" y="245" width="246" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM1-pG-WX4">
+                                <rect key="frame" x="232" y="299" width="151" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Profil Güncelle"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Güncelleme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-zf-dI6">
+                                <rect key="frame" x="0.0" y="354" width="393" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="tableCellBlueTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eski Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMx-iK-772">
+                                <rect key="frame" x="10" y="389.33333333333331" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ie6-WW-8Ye">
+                                <rect key="frame" x="10" y="433.33333333333331" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFh-Ro-lp5">
+                                <rect key="frame" x="238" y="487.33333333333331" width="145" height="34.999999999999943"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Email Güncelle"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre Güncelleme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1c-fH-Ioc">
+                                <rect key="frame" x="0.0" y="542.33333333333337" width="393" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="tableCellBlueTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eski Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJH-rD-eHR">
+                                <rect key="frame" x="10" y="577.66666666666663" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="097-aM-Is2">
+                                <rect key="frame" x="10" y="621.66666666666663" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-sa-lwQ">
+                                <rect key="frame" x="238" y="675.66666666666663" width="145" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Şifre Güncelle"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kIp-bX-mRV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="Hz8-bM-9IJ" secondAttribute="trailing" id="1QV-f0-25z"/>
+                            <constraint firstItem="ZkS-Dx-pAe" firstAttribute="top" secondItem="2MV-Kd-B5s" secondAttribute="bottom" constant="10" id="273-g2-abX"/>
+                            <constraint firstItem="xWg-sa-lwQ" firstAttribute="top" secondItem="097-aM-Is2" secondAttribute="bottom" constant="20" id="4Yt-3C-dLU"/>
+                            <constraint firstItem="4Lp-CP-hLj" firstAttribute="top" secondItem="Hz8-bM-9IJ" secondAttribute="bottom" constant="20" id="863-DE-e1c"/>
+                            <constraint firstItem="o1c-fH-Ioc" firstAttribute="trailing" secondItem="kIp-bX-mRV" secondAttribute="trailing" id="ARx-dg-I8X"/>
+                            <constraint firstItem="o1c-fH-Ioc" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" id="B9O-i1-2fV"/>
+                            <constraint firstItem="jMx-iK-772" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="CwD-If-0Gl"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="bottom" secondItem="Hz8-bM-9IJ" secondAttribute="bottom" constant="725" id="Db4-eJ-399"/>
+                            <constraint firstItem="Ie6-WW-8Ye" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="DpX-7q-jf8"/>
+                            <constraint firstItem="xWg-sa-lwQ" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="238" id="EL9-GS-vgS"/>
+                            <constraint firstItem="DFh-Ro-lp5" firstAttribute="top" secondItem="Ie6-WW-8Ye" secondAttribute="bottom" constant="20" id="FW4-Bh-4bC"/>
+                            <constraint firstItem="2MV-Kd-B5s" firstAttribute="top" secondItem="4Lp-CP-hLj" secondAttribute="bottom" constant="10" id="FmL-rQ-82M"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="vjx-Zc-jdn" secondAttribute="trailing" constant="10" id="GKj-pd-HqT"/>
+                            <constraint firstItem="Hz8-bM-9IJ" firstAttribute="top" secondItem="kIp-bX-mRV" secondAttribute="top" constant="10" id="Ga8-BH-4sv"/>
+                            <constraint firstItem="dSk-nA-1L1" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="JQw-hK-fDP"/>
+                            <constraint firstItem="dSk-nA-1L1" firstAttribute="top" secondItem="ZkS-Dx-pAe" secondAttribute="bottom" constant="10" id="Jc0-2M-GW3"/>
+                            <constraint firstItem="jMx-iK-772" firstAttribute="top" secondItem="8qN-zf-dI6" secondAttribute="bottom" constant="15" id="K2M-3i-GJo"/>
+                            <constraint firstItem="NJH-rD-eHR" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="KME-WK-IL0"/>
+                            <constraint firstItem="vjx-Zc-jdn" firstAttribute="top" secondItem="ZkS-Dx-pAe" secondAttribute="bottom" constant="10" id="Nnp-ut-oaC"/>
+                            <constraint firstItem="NJH-rD-eHR" firstAttribute="top" secondItem="o1c-fH-Ioc" secondAttribute="bottom" constant="15" id="Nvu-nM-ZOs"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="4Lp-CP-hLj" secondAttribute="trailing" constant="10" id="PZy-ky-pEL"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="jMx-iK-772" secondAttribute="trailing" constant="10" id="RPR-Ty-dGL"/>
+                            <constraint firstItem="Ie6-WW-8Ye" firstAttribute="top" secondItem="jMx-iK-772" secondAttribute="bottom" constant="10" id="S4n-Sp-VJu"/>
+                            <constraint firstItem="8qN-zf-dI6" firstAttribute="top" secondItem="FM1-pG-WX4" secondAttribute="bottom" constant="20" id="SEg-B8-mfI"/>
+                            <constraint firstItem="8qN-zf-dI6" firstAttribute="trailing" secondItem="kIp-bX-mRV" secondAttribute="trailing" id="T4y-fS-lRQ"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="Ie6-WW-8Ye" secondAttribute="trailing" constant="10" id="Tls-O4-TWm"/>
+                            <constraint firstItem="vjx-Zc-jdn" firstAttribute="leading" secondItem="dSk-nA-1L1" secondAttribute="trailing" constant="23" id="Wt2-oX-sdn"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="097-aM-Is2" secondAttribute="trailing" constant="10" id="aF8-a7-hzs"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="2MV-Kd-B5s" secondAttribute="trailing" constant="10" id="aN4-cI-I3b"/>
+                            <constraint firstItem="097-aM-Is2" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="dMK-80-qzs"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="DFh-Ro-lp5" secondAttribute="trailing" constant="10" id="eMq-XC-aKo"/>
+                            <constraint firstItem="FM1-pG-WX4" firstAttribute="top" secondItem="vjx-Zc-jdn" secondAttribute="bottom" constant="20" id="f8c-We-bm5"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="FM1-pG-WX4" secondAttribute="trailing" constant="10" id="jDc-AX-X5s"/>
+                            <constraint firstItem="9G7-jn-53a" firstAttribute="leading" secondItem="ZkS-Dx-pAe" secondAttribute="trailing" constant="38" id="jIX-vN-DmP"/>
+                            <constraint firstItem="9G7-jn-53a" firstAttribute="top" secondItem="ZkS-Dx-pAe" secondAttribute="top" id="jhJ-4u-Jqf"/>
+                            <constraint firstItem="8qN-zf-dI6" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" id="oSe-U0-8My"/>
+                            <constraint firstItem="2MV-Kd-B5s" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="ocO-ur-Jf8"/>
+                            <constraint firstItem="ZkS-Dx-pAe" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="qZu-mx-JCb"/>
+                            <constraint firstItem="o1c-fH-Ioc" firstAttribute="top" secondItem="DFh-Ro-lp5" secondAttribute="bottom" constant="20" id="qmB-9e-ZW8"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="xWg-sa-lwQ" secondAttribute="trailing" constant="10" id="qmx-8V-uqq"/>
+                            <constraint firstItem="9G7-jn-53a" firstAttribute="trailing" secondItem="2MV-Kd-B5s" secondAttribute="trailing" id="qtY-pS-MA9"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="dSk-nA-1L1" secondAttribute="trailing" constant="279" id="s6L-u9-97T"/>
+                            <constraint firstItem="FM1-pG-WX4" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="232" id="uqd-cA-nsk"/>
+                            <constraint firstItem="kIp-bX-mRV" firstAttribute="trailing" secondItem="NJH-rD-eHR" secondAttribute="trailing" constant="10" id="x0b-k0-RhP"/>
+                            <constraint firstItem="Hz8-bM-9IJ" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" id="y6q-Dm-bh8"/>
+                            <constraint firstItem="DFh-Ro-lp5" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="238" id="ysn-oM-gJI"/>
+                            <constraint firstItem="4Lp-CP-hLj" firstAttribute="leading" secondItem="kIp-bX-mRV" secondAttribute="leading" constant="10" id="zMy-rd-0un"/>
+                            <constraint firstItem="097-aM-Is2" firstAttribute="top" secondItem="NJH-rD-eHR" secondAttribute="bottom" constant="10" id="za4-5S-lbN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqW-gH-tew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4715.2671755725187" y="652.11267605633805"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WG4-Js-ivs">
