@@ -8,20 +8,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="o5m-rc-h2S">
             <objects>
-                <viewController id="K2g-5E-65j" sceneMemberID="viewController">
+                <viewController id="K2g-5E-65j" customClass="LoginViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whp-BJ-qNX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-S9-3fx">
+                                <rect key="frame" x="106" y="75" width="181" height="32"/>
+                                <segments>
+                                    <segment title="Giriş Yap"/>
+                                    <segment title="Üye Ol"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="tableCellBlueTextColor"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-DP-RCO">
+                                <rect key="frame" x="10" y="193" width="373" height="34"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-8c-yOr">
+                                <rect key="frame" x="10" y="270" width="373" height="34"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh7-6R-25P">
+                                <rect key="frame" x="120" y="404" width="153" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Giriş Yap" cornerStyle="medium"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-Z9-gL6">
+                                <rect key="frame" x="0.0" y="468.33333333333331" width="393" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Şifremi Unuttum">
+                                    <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OF6-Jw-EXl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3EV-DP-RCO" firstAttribute="leading" secondItem="OF6-Jw-EXl" secondAttribute="leading" constant="10" id="B0Q-1n-toK"/>
+                            <constraint firstItem="xh7-6R-25P" firstAttribute="top" secondItem="RHV-8c-yOr" secondAttribute="bottom" constant="100" id="Fg3-0a-rou"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="bottom" secondItem="xh7-6R-25P" secondAttribute="bottom" constant="379.67000000000002" id="IHc-9C-erm"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="trailing" secondItem="3EV-DP-RCO" secondAttribute="trailing" constant="10" id="J0j-4X-ika"/>
+                            <constraint firstItem="RHV-8c-yOr" firstAttribute="leading" secondItem="OF6-Jw-EXl" secondAttribute="leading" constant="10" id="LQ2-x8-GQ2"/>
+                            <constraint firstItem="xh7-6R-25P" firstAttribute="leading" secondItem="OF6-Jw-EXl" secondAttribute="leading" constant="120" id="MSc-rm-d5x"/>
+                            <constraint firstItem="dOb-S9-3fx" firstAttribute="leading" secondItem="OF6-Jw-EXl" secondAttribute="leading" constant="106" id="PqH-ZG-DaS"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="bottom" secondItem="2nq-Z9-gL6" secondAttribute="bottom" constant="314.67000000000002" id="RrO-SB-meu"/>
+                            <constraint firstItem="3EV-DP-RCO" firstAttribute="top" secondItem="dOb-S9-3fx" secondAttribute="bottom" constant="87" id="SiO-Xb-HQp"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="trailing" secondItem="xh7-6R-25P" secondAttribute="trailing" constant="120" id="VRq-Fb-YWb"/>
+                            <constraint firstItem="RHV-8c-yOr" firstAttribute="top" secondItem="3EV-DP-RCO" secondAttribute="bottom" constant="43" id="VU5-Nh-320"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="trailing" secondItem="dOb-S9-3fx" secondAttribute="trailing" constant="106" id="ZM8-U7-uYm"/>
+                            <constraint firstItem="2nq-Z9-gL6" firstAttribute="top" secondItem="xh7-6R-25P" secondAttribute="bottom" constant="30" id="ZQ9-q2-4u4"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="bottom" secondItem="RHV-8c-yOr" secondAttribute="bottom" constant="514" id="bZA-su-Md5"/>
+                            <constraint firstItem="2nq-Z9-gL6" firstAttribute="leading" secondItem="OF6-Jw-EXl" secondAttribute="leading" id="coE-Bc-l1T"/>
+                            <constraint firstItem="dOb-S9-3fx" firstAttribute="top" secondItem="OF6-Jw-EXl" secondAttribute="top" constant="16" id="gH8-K3-aji"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="trailing" secondItem="RHV-8c-yOr" secondAttribute="trailing" constant="10" id="l00-d8-MYs"/>
+                            <constraint firstItem="OF6-Jw-EXl" firstAttribute="trailing" secondItem="2nq-Z9-gL6" secondAttribute="trailing" id="tsg-hg-rpT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIy-Lt-eHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4888" y="-39"/>
+            <point key="canvasLocation" x="4681.679389312977" y="-82.394366197183103"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
