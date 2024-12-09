@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8AE2D06E6A4005D1F80 /* AppDelegate.swift */; };
+		C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B42D06E6A4005D1F80 /* SceneDelegate.swift */; };
+		C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B52D06E6A4005D1F80 /* ViewController.swift */; };
+		C67CC8BF2D06E6A4005D1F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CC8B22D06E6A4005D1F80 /* LaunchScreen.storyboard */; };
+		C67CC8C02D06E6A4005D1F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CC8B32D06E6A4005D1F80 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C67CC84B2D064DD3005D1F80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +35,11 @@
 		C67CC8312D064DD1005D1F80 /* CepteBilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepteBilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC84A2D064DD3005D1F80 /* CepteBiletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC8542D064DD3005D1F80 /* CepteBiletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67CC8AE2D06E6A4005D1F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C67CC8B42D06E6A4005D1F80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C67CC8B52D06E6A4005D1F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C67CC8B62D06E6A4005D1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C67CC8B72D06E6A4005D1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -89,6 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				C67CC8332D064DD1005D1F80 /* CepteBilet */,
+				C67CC8C72D06E6BB005D1F80 /* Storyboard */,
+				C67CC8852D06E63C005D1F80 /* Delegate */,
+				C67CC8832D06E54E005D1F80 /* ViewModel */,
+				C67CC8822D06E543005D1F80 /* Cell */,
+				C67CC8812D06E530005D1F80 /* Controller */,
 				C67CC84D2D064DD3005D1F80 /* CepteBiletTests */,
 				C67CC8572D064DD3005D1F80 /* CepteBiletUITests */,
 				C67CC8322D064DD1005D1F80 /* Products */,
@@ -103,6 +121,46 @@
 				C67CC8542D064DD3005D1F80 /* CepteBiletUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C67CC8812D06E530005D1F80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C67CC8B52D06E6A4005D1F80 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C67CC8822D06E543005D1F80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C67CC8832D06E54E005D1F80 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C67CC8852D06E63C005D1F80 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C67CC8AE2D06E6A4005D1F80 /* AppDelegate.swift */,
+				C67CC8B42D06E6A4005D1F80 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		C67CC8C72D06E6BB005D1F80 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C67CC8B32D06E6A4005D1F80 /* Main.storyboard */,
+				C67CC8B22D06E6A4005D1F80 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67CC8BF2D06E6A4005D1F80 /* LaunchScreen.storyboard in Resources */,
+				C67CC8C02D06E6A4005D1F80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
+				C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */,
+				C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +343,25 @@
 			targetProxy = C67CC8552D064DD3005D1F80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C67CC8B22D06E6A4005D1F80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C67CC8B72D06E6A4005D1F80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C67CC8B32D06E6A4005D1F80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C67CC8B62D06E6A4005D1F80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C67CC85E2D064DD3005D1F80 /* Debug */ = {
