@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C643EC832D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC822D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift */; };
+		C643EC852D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC842D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift */; };
+		C643EC872D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC862D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift */; };
+		C643EC892D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC882D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift */; };
 		C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8AE2D06E6A4005D1F80 /* AppDelegate.swift */; };
 		C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B42D06E6A4005D1F80 /* SceneDelegate.swift */; };
 		C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B52D06E6A4005D1F80 /* ViewController.swift */; };
@@ -16,6 +20,7 @@
 		C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0062D071CDB0060AC86 /* LoginViewController.swift */; };
 		C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0082D07200F0060AC86 /* SignUpViewController.swift */; };
 		C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */; };
+		C68CE01A2D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */; };
 		C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C643EC822D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageMusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		C643EC842D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTheatreCollectionViewCell.swift; sourceTree = "<group>"; };
+		C643EC862D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageSportCollectionViewCell.swift; sourceTree = "<group>"; };
+		C643EC882D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C67CC8312D064DD1005D1F80 /* CepteBilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepteBilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC84A2D064DD3005D1F80 /* CepteBiletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC8542D064DD3005D1F80 /* CepteBiletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +58,7 @@
 		C68CE0062D071CDB0060AC86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C68CE0082D07200F0060AC86 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
+		C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageAdvertCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */,
+				C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */,
+				C643EC822D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift */,
+				C643EC842D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift */,
+				C643EC862D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift */,
+				C643EC882D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -324,14 +339,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C643EC852D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift in Sources */,
 				C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */,
 				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,
+				C643EC892D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift in Sources */,
 				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
 				C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */,
 				C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */,
+				C643EC872D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift in Sources */,
 				C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */,
+				C68CE01A2D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift in Sources */,
 				C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */,
+				C643EC832D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
