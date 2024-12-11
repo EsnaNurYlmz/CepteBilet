@@ -9,4 +9,8 @@ import UIKit
 
 class HomePageTheatreCollectionViewCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var HomePageTheatreImage: UIImageView!
+    @IBOutlet weak var HomePageTheatreLabel: UILabel!
+    
 }

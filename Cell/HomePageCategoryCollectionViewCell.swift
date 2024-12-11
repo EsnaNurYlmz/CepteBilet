@@ -9,4 +9,5 @@ import UIKit
 
 class HomePageCategoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var HomePageCategoryLabel: UILabel!
 }

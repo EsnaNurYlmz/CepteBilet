@@ -9,4 +9,5 @@ import UIKit
 
 class HomePageSportCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var HomePageSportImage: UIImageView!
 }

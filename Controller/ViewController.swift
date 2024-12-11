@@ -10,6 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var advertCollectionView: UICollectionView!
+    @IBOutlet weak var HomePageMusicCollectionView: UICollectionView!
+    @IBOutlet weak var HomePageTheatreCollectionView: UICollectionView!
+    
+    @IBOutlet weak var HomePageSportCollectionView: UICollectionView!
+    
+    @IBOutlet weak var HomePageCategoryCollectionView: UICollectionView!
+    
     let advert = ["advert2","advert1","advert3","advert4","advert6","advert5","advert7"]
     
     override func viewDidLoad() {

@@ -9,4 +9,7 @@ import UIKit
 
 class HomePageMusicCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var HomePageMusicImage: UIImageView!
+    
+    @IBOutlet weak var HomePageMusicLabel: UILabel!
 }
