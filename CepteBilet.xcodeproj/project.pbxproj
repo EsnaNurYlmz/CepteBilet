@@ -31,6 +31,7 @@
 		C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */; };
 		C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */; };
 		C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E652D106636007B506F /* FavoriteViewController.swift */; };
+		C6FE2E682D106E6C007B506F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E672D106E6C007B506F /* TicketsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6FE2E652D106636007B506F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		C6FE2E672D106E6C007B506F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -174,6 +176,7 @@
 				C68CE0082D07200F0060AC86 /* SignUpViewController.swift */,
 				C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */,
 				C6FE2E652D106636007B506F /* FavoriteViewController.swift */,
+				C6FE2E672D106E6C007B506F /* TicketsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				C643ECA52D0A483400CB0424 /* FilterViewController.swift in Sources */,
 				C643EC8D2D08F1D100CB0424 /* CategoryCollectionViewCell.swift in Sources */,
 				C643ECA32D0A1BD000CB0424 /* CategoryDetailCollectionViewCell.swift in Sources */,
+				C6FE2E682D106E6C007B506F /* TicketsViewController.swift in Sources */,
 				C643EC852D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift in Sources */,
 				C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */,
 				C643EC8F2D09B53200CB0424 /* CategoryDetailViewController.swift in Sources */,
