@@ -29,6 +29,8 @@
 		C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */; };
 		C68CE01A2D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */; };
 		C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */; };
+		C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */; };
+		C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E652D106636007B506F /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
 		C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageAdvertCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6FE2E652D106636007B506F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -169,6 +173,7 @@
 				C68CE0062D071CDB0060AC86 /* LoginViewController.swift */,
 				C68CE0082D07200F0060AC86 /* SignUpViewController.swift */,
 				C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */,
+				C6FE2E652D106636007B506F /* FavoriteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				C643EC8C2D08F1D100CB0424 /* CategoryCollectionViewCell.swift */,
 				C643ECA22D0A1BD000CB0424 /* CategoryDetailCollectionViewCell.swift */,
 				C643ECA02D0A1BB700CB0424 /* CategoryDetailRecommendedCollectionViewCell.swift */,
+				C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */,
 				C643ECA52D0A483400CB0424 /* FilterViewController.swift in Sources */,
 				C643EC8D2D08F1D100CB0424 /* CategoryCollectionViewCell.swift in Sources */,
 				C643ECA32D0A1BD000CB0424 /* CategoryDetailCollectionViewCell.swift in Sources */,
@@ -368,6 +375,7 @@
 				C643EC8F2D09B53200CB0424 /* CategoryDetailViewController.swift in Sources */,
 				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,
+				C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */,
 				C643EC892D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift in Sources */,
 				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
 				C643EC9F2D0A196800CB0424 /* DetailViewController.swift in Sources */,
