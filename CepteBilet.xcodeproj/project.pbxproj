@@ -32,6 +32,7 @@
 		C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */; };
 		C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E652D106636007B506F /* FavoriteViewController.swift */; };
 		C6FE2E682D106E6C007B506F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E672D106E6C007B506F /* TicketsViewController.swift */; };
+		C6FE2E6A2D11A9E8007B506F /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E692D11A9E8007B506F /* TicketsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6FE2E652D106636007B506F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		C6FE2E672D106E6C007B506F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		C6FE2E692D11A9E8007B506F /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -194,6 +196,7 @@
 				C643ECA22D0A1BD000CB0424 /* CategoryDetailCollectionViewCell.swift */,
 				C643ECA02D0A1BB700CB0424 /* CategoryDetailRecommendedCollectionViewCell.swift */,
 				C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */,
+				C6FE2E692D11A9E8007B506F /* TicketsCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				C643EC852D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift in Sources */,
 				C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */,
 				C643EC8F2D09B53200CB0424 /* CategoryDetailViewController.swift in Sources */,
+				C6FE2E6A2D11A9E8007B506F /* TicketsCollectionViewCell.swift in Sources */,
 				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,
 				C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */,

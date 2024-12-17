@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWv-eg-UWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11193.129770992366" y="-82.394366197183103"/>
+            <point key="canvasLocation" x="11193" y="-82"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
@@ -1284,13 +1284,113 @@
                     <view key="view" contentMode="scaleToFill" id="nfH-g9-PFz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BİLETLERİM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-qY-6pF">
+                                <rect key="frame" x="10" y="79" width="373" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="tableCellBlueTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-si-Np0">
+                                <rect key="frame" x="0.0" y="139.33333333333337" width="393" height="158.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FoN-sz-4wf">
+                                    <size key="itemSize" width="387" height="158"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TicketsCell" id="gf5-hJ-TTk" customClass="TicketsCollectionViewCell" customModule="CepteBilet" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="0.0" width="387" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6zQ-ii-az4">
+                                            <rect key="frame" x="0.0" y="0.0" width="387" height="158"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NkC-sU-tAt">
+                                                    <rect key="frame" x="8" y="8" width="177" height="142"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="etkinlik adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNB-0R-lDU">
+                                                    <rect key="frame" x="195" y="15" width="182" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="YNb-lf-IFp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="etkinlik Tarih" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsx-hw-9tg">
+                                                    <rect key="frame" x="195" y="51" width="182" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Aze-SL-mdK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mekan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-cm-4mJ">
+                                                    <rect key="frame" x="195" y="87" width="182" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="SNU-9F-plO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8d-iG-ohB">
+                                                    <rect key="frame" x="333" y="120" width="37" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="37" id="cth-ar-Xdf"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="tintColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" image="bubble.and.pencil.rtl" catalog="system">
+                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zsx-hw-9tg" firstAttribute="trailing" secondItem="Eic-cm-4mJ" secondAttribute="trailing" id="1xR-V8-A8f"/>
+                                                <constraint firstItem="mNB-0R-lDU" firstAttribute="leading" secondItem="Zsx-hw-9tg" secondAttribute="leading" id="A3Y-o6-eeB"/>
+                                                <constraint firstItem="Zsx-hw-9tg" firstAttribute="top" secondItem="mNB-0R-lDU" secondAttribute="bottom" constant="15" id="Er0-eC-LJq"/>
+                                                <constraint firstAttribute="trailing" secondItem="c8d-iG-ohB" secondAttribute="trailing" constant="17" id="Nee-9w-4Q8"/>
+                                                <constraint firstAttribute="bottom" secondItem="c8d-iG-ohB" secondAttribute="bottom" constant="8" id="P3E-8R-6A8"/>
+                                                <constraint firstItem="NkC-sU-tAt" firstAttribute="top" secondItem="6zQ-ii-az4" secondAttribute="top" constant="8" id="Pxj-bk-NK2"/>
+                                                <constraint firstItem="Eic-cm-4mJ" firstAttribute="top" secondItem="Zsx-hw-9tg" secondAttribute="bottom" constant="15" id="QW9-rp-KfF"/>
+                                                <constraint firstAttribute="bottom" secondItem="NkC-sU-tAt" secondAttribute="bottom" constant="8" id="TIl-48-Mzi"/>
+                                                <constraint firstItem="c8d-iG-ohB" firstAttribute="top" secondItem="Eic-cm-4mJ" secondAttribute="bottom" constant="12" id="XSs-Li-qQl"/>
+                                                <constraint firstItem="NkC-sU-tAt" firstAttribute="leading" secondItem="6zQ-ii-az4" secondAttribute="leading" constant="8" id="a9o-gx-afa"/>
+                                                <constraint firstItem="Zsx-hw-9tg" firstAttribute="leading" secondItem="Eic-cm-4mJ" secondAttribute="leading" id="a9w-9T-MU1"/>
+                                                <constraint firstAttribute="trailing" secondItem="NkC-sU-tAt" secondAttribute="trailing" constant="202" id="bbt-ci-xnZ"/>
+                                                <constraint firstItem="mNB-0R-lDU" firstAttribute="leading" secondItem="NkC-sU-tAt" secondAttribute="trailing" constant="10" id="bsd-yX-2Bl"/>
+                                                <constraint firstAttribute="trailing" secondItem="mNB-0R-lDU" secondAttribute="trailing" constant="10" id="dUb-NZ-3c5"/>
+                                                <constraint firstItem="mNB-0R-lDU" firstAttribute="top" secondItem="6zQ-ii-az4" secondAttribute="top" constant="15" id="eNi-hd-SDu"/>
+                                                <constraint firstItem="mNB-0R-lDU" firstAttribute="trailing" secondItem="Zsx-hw-9tg" secondAttribute="trailing" id="ewM-uR-9xm"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="387" height="158"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mPC-w9-Vwq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mPC-w9-Vwq" firstAttribute="trailing" secondItem="FEa-qY-6pF" secondAttribute="trailing" constant="10" id="6gm-UK-tWh"/>
+                            <constraint firstItem="FEa-qY-6pF" firstAttribute="leading" secondItem="mPC-w9-Vwq" secondAttribute="leading" constant="10" id="F6g-lm-9wK"/>
+                            <constraint firstItem="FEa-qY-6pF" firstAttribute="top" secondItem="mPC-w9-Vwq" secondAttribute="top" constant="20" id="MFn-t6-g7D"/>
+                            <constraint firstItem="mPC-w9-Vwq" firstAttribute="trailing" secondItem="B5Y-si-Np0" secondAttribute="trailing" id="az3-Zm-8qg"/>
+                            <constraint firstItem="B5Y-si-Np0" firstAttribute="top" secondItem="FEa-qY-6pF" secondAttribute="bottom" constant="40" id="fla-d7-JZ1"/>
+                            <constraint firstItem="mPC-w9-Vwq" firstAttribute="bottom" secondItem="B5Y-si-Np0" secondAttribute="bottom" constant="520" id="tEp-bt-8hV"/>
+                            <constraint firstItem="B5Y-si-Np0" firstAttribute="leading" secondItem="mPC-w9-Vwq" secondAttribute="leading" id="vM0-8r-XcI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fee-Mu-AKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10269" y="1408"/>
+            <point key="canvasLocation" x="10267.938931297709" y="1407.7464788732395"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WG4-Js-ivs">
@@ -1339,6 +1439,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="500" height="500"/>
+        <image name="bubble.and.pencil.rtl" catalog="system" width="128" height="126"/>
         <image name="calendar.badge.plus" catalog="system" width="128" height="109"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -1355,7 +1456,13 @@
         <systemColor name="systemGrayColor">
             <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
