@@ -150,7 +150,6 @@
 				C67CC8332D064DD1005D1F80 /* CepteBilet */,
 				C67CC8C72D06E6BB005D1F80 /* Storyboard */,
 				C67CC8852D06E63C005D1F80 /* Delegate */,
-				C67CC8832D06E54E005D1F80 /* ViewModel */,
 				C67CC8822D06E543005D1F80 /* Cell */,
 				C67CC8812D06E530005D1F80 /* Controller */,
 				C67CC84D2D064DD3005D1F80 /* CepteBiletTests */,
@@ -205,13 +204,6 @@
 				C62A2B8A2D12CBFA00D369D7 /* ReviewTableViewCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		C67CC8832D06E54E005D1F80 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C67CC8852D06E63C005D1F80 /* Delegate */ = {
