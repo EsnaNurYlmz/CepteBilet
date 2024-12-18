@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C62A2B8B2D12CBFA00D369D7 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A2B8A2D12CBFA00D369D7 /* ReviewTableViewCell.swift */; };
 		C643EC832D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC822D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift */; };
 		C643EC852D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC842D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift */; };
 		C643EC872D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643EC862D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift */; };
@@ -33,6 +34,7 @@
 		C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E652D106636007B506F /* FavoriteViewController.swift */; };
 		C6FE2E682D106E6C007B506F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E672D106E6C007B506F /* TicketsViewController.swift */; };
 		C6FE2E6A2D11A9E8007B506F /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E692D11A9E8007B506F /* TicketsCollectionViewCell.swift */; };
+		C6FE2E862D12BF12007B506F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E852D12BF12007B506F /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C62A2B8A2D12CBFA00D369D7 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		C643EC822D08EA7600CB0424 /* HomePageMusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageMusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		C643EC842D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTheatreCollectionViewCell.swift; sourceTree = "<group>"; };
 		C643EC862D08EACD00CB0424 /* HomePageSportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageSportCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		C6FE2E652D106636007B506F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		C6FE2E672D106E6C007B506F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		C6FE2E692D11A9E8007B506F /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6FE2E852D12BF12007B506F /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -179,6 +183,7 @@
 				C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */,
 				C6FE2E652D106636007B506F /* FavoriteViewController.swift */,
 				C6FE2E672D106E6C007B506F /* TicketsViewController.swift */,
+				C6FE2E852D12BF12007B506F /* ReviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				C643ECA02D0A1BB700CB0424 /* CategoryDetailRecommendedCollectionViewCell.swift */,
 				C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */,
 				C6FE2E692D11A9E8007B506F /* TicketsCollectionViewCell.swift */,
+				C62A2B8A2D12CBFA00D369D7 /* ReviewTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */,
+				C6FE2E862D12BF12007B506F /* ReviewViewController.swift in Sources */,
 				C643ECA52D0A483400CB0424 /* FilterViewController.swift in Sources */,
 				C643EC8D2D08F1D100CB0424 /* CategoryCollectionViewCell.swift in Sources */,
 				C643ECA32D0A1BD000CB0424 /* CategoryDetailCollectionViewCell.swift in Sources */,
@@ -386,6 +393,7 @@
 				C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */,
 				C643EC892D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift in Sources */,
 				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
+				C62A2B8B2D12CBFA00D369D7 /* ReviewTableViewCell.swift in Sources */,
 				C643EC9F2D0A196800CB0424 /* DetailViewController.swift in Sources */,
 				C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */,
 				C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */,
