@@ -21,6 +21,7 @@
 		C643ECA52D0A483400CB0424 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643ECA42D0A483400CB0424 /* FilterViewController.swift */; };
 		C65E68D62D1D8D8800B6D9D8 /* TicketsBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E68D52D1D8D8800B6D9D8 /* TicketsBuyViewController.swift */; };
 		C667ED912D1E0DD70063C971 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C667ED902D1E0DD70063C971 /* PaymentViewController.swift */; };
+		C667EDA12D2586300063C971 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C667EDA02D2586300063C971 /* CoreLocation.framework */; };
 		C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8AE2D06E6A4005D1F80 /* AppDelegate.swift */; };
 		C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B42D06E6A4005D1F80 /* SceneDelegate.swift */; };
 		C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B52D06E6A4005D1F80 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		C643ECA42D0A483400CB0424 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		C65E68D52D1D8D8800B6D9D8 /* TicketsBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsBuyViewController.swift; sourceTree = "<group>"; };
 		C667ED902D1E0DD70063C971 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		C667EDA02D2586300063C971 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C67CC8312D064DD1005D1F80 /* CepteBilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepteBilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC84A2D064DD3005D1F80 /* CepteBiletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC8542D064DD3005D1F80 /* CepteBiletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C667EDA12D2586300063C971 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C667ED9F2D25862D0063C971 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C667EDA02D2586300063C971 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C67CC8282D064DD1005D1F80 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +169,7 @@
 				C67CC8812D06E530005D1F80 /* Controller */,
 				C67CC84D2D064DD3005D1F80 /* CepteBiletTests */,
 				C67CC8572D064DD3005D1F80 /* CepteBiletUITests */,
+				C667ED9F2D25862D0063C971 /* Frameworks */,
 				C67CC8322D064DD1005D1F80 /* Products */,
 			);
 			sourceTree = "<group>";
