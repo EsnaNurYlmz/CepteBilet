@@ -22,6 +22,8 @@
 		C65E68D62D1D8D8800B6D9D8 /* TicketsBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E68D52D1D8D8800B6D9D8 /* TicketsBuyViewController.swift */; };
 		C667ED912D1E0DD70063C971 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C667ED902D1E0DD70063C971 /* PaymentViewController.swift */; };
 		C667EDA12D2586300063C971 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C667EDA02D2586300063C971 /* CoreLocation.framework */; };
+		C667EDA32D25F36B0063C971 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C667EDA22D25F36B0063C971 /* LocationViewController.swift */; };
+		C667EDA52D25F4C20063C971 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C667EDA42D25F4C20063C971 /* MapKit.framework */; };
 		C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8AE2D06E6A4005D1F80 /* AppDelegate.swift */; };
 		C67CC8BB2D06E6A4005D1F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B42D06E6A4005D1F80 /* SceneDelegate.swift */; };
 		C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B52D06E6A4005D1F80 /* ViewController.swift */; };
@@ -73,6 +75,8 @@
 		C65E68D52D1D8D8800B6D9D8 /* TicketsBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsBuyViewController.swift; sourceTree = "<group>"; };
 		C667ED902D1E0DD70063C971 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		C667EDA02D2586300063C971 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C667EDA22D25F36B0063C971 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		C667EDA42D25F4C20063C971 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C67CC8312D064DD1005D1F80 /* CepteBilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepteBilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC84A2D064DD3005D1F80 /* CepteBiletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CC8542D064DD3005D1F80 /* CepteBiletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CepteBiletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C667EDA52D25F4C20063C971 /* MapKit.framework in Frameworks */,
 				C667EDA12D2586300063C971 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +159,7 @@
 		C667ED9F2D25862D0063C971 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C667EDA42D25F4C20063C971 /* MapKit.framework */,
 				C667EDA02D2586300063C971 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -201,6 +207,7 @@
 				C6FE2E852D12BF12007B506F /* ReviewViewController.swift */,
 				C65E68D52D1D8D8800B6D9D8 /* TicketsBuyViewController.swift */,
 				C667ED902D1E0DD70063C971 /* PaymentViewController.swift */,
+				C667EDA22D25F36B0063C971 /* LocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -403,6 +410,7 @@
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,
 				C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */,
 				C643EC892D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift in Sources */,
+				C667EDA32D25F36B0063C971 /* LocationViewController.swift in Sources */,
 				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
 				C62A2B8B2D12CBFA00D369D7 /* ReviewTableViewCell.swift in Sources */,
 				C643EC9F2D0A196800CB0424 /* DetailViewController.swift in Sources */,
@@ -477,6 +485,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CepteBilet/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "location permission";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -504,6 +513,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CepteBilet/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "location permission";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -1552,52 +1553,47 @@
             </objects>
             <point key="canvasLocation" x="2638.9312977099235" y="1126.7605633802818"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="yST-Ex-B6k">
-            <objects>
-                <viewController id="cTL-9g-TeL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aXk-iT-UmX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Akj-Pq-2yX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="aHI-1B-mw5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HF7-24-cHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4360" y="1646"/>
-        </scene>
         <!--Yakınımda-->
         <scene sceneID="F1y-yM-Y1g">
             <objects>
-                <viewController id="av1-IZ-9K9" sceneMemberID="viewController">
+                <viewController id="av1-IZ-9K9" customClass="LocationViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QK6-cn-dNm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knI-vO-RoX">
+                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-rF-jMS">
+                                <rect key="frame" x="0.0" y="73" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="av1-IZ-9K9" id="Jsd-hi-ABl"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0dZ-QP-xh7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xRg-rF-jMS" firstAttribute="trailing" secondItem="0dZ-QP-xh7" secondAttribute="trailing" id="GIN-5q-hMc"/>
+                            <constraint firstItem="knI-vO-RoX" firstAttribute="top" secondItem="xRg-rF-jMS" secondAttribute="bottom" id="GUB-mN-IIK"/>
+                            <constraint firstItem="knI-vO-RoX" firstAttribute="bottom" secondItem="0dZ-QP-xh7" secondAttribute="bottom" id="GqC-v4-XS8"/>
+                            <constraint firstItem="knI-vO-RoX" firstAttribute="top" secondItem="xRg-rF-jMS" secondAttribute="bottom" id="Inm-8k-ohR"/>
+                            <constraint firstItem="knI-vO-RoX" firstAttribute="leading" secondItem="0dZ-QP-xh7" secondAttribute="leading" id="dG3-o2-CAZ"/>
+                            <constraint firstItem="xRg-rF-jMS" firstAttribute="top" secondItem="0dZ-QP-xh7" secondAttribute="top" constant="14" id="g3g-2x-yOM"/>
+                            <constraint firstItem="knI-vO-RoX" firstAttribute="trailing" secondItem="0dZ-QP-xh7" secondAttribute="trailing" id="hpu-Bl-Sk1"/>
+                            <constraint firstItem="xRg-rF-jMS" firstAttribute="leading" secondItem="0dZ-QP-xh7" secondAttribute="leading" id="wOM-0e-Qqk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Yakınımda" image="location.app" catalog="system" id="jvt-RG-ENp"/>
+                    <connections>
+                        <outlet property="MapView" destination="knI-vO-RoX" id="RUC-m7-2ge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Go7-gi-ScX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4360" y="177"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Edm-dY-FU7">
-            <objects>
-                <viewController id="tJb-Xs-kCl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vzO-Nd-wwh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="42K-wi-pdF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fgH-bw-iyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4360" y="920"/>
+            <point key="canvasLocation" x="4359.5419847328239" y="176.7605633802817"/>
         </scene>
         <!--Favoriler-->
         <scene sceneID="Oh7-MP-US8">
