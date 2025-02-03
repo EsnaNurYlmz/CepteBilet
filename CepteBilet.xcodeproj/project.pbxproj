@@ -29,6 +29,11 @@
 		C67CC8BC2D06E6A4005D1F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CC8B52D06E6A4005D1F80 /* ViewController.swift */; };
 		C67CC8BF2D06E6A4005D1F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CC8B22D06E6A4005D1F80 /* LaunchScreen.storyboard */; };
 		C67CC8C02D06E6A4005D1F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CC8B32D06E6A4005D1F80 /* Main.storyboard */; };
+		C682A3052D50FB5900C6CFB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A3042D50FB5900C6CFB9 /* User.swift */; };
+		C682A3142D5168B300C6CFB9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A3132D5168B300C6CFB9 /* Category.swift */; };
+		C682A3182D516AB300C6CFB9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A3172D516AB300C6CFB9 /* Event.swift */; };
+		C682A31A2D516EB500C6CFB9 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A3192D516EB500C6CFB9 /* Review.swift */; };
+		C682A31C2D5170AC00C6CFB9 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A31B2D5170AC00C6CFB9 /* Filter.swift */; };
 		C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */; };
 		C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0062D071CDB0060AC86 /* LoginViewController.swift */; };
 		C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0082D07200F0060AC86 /* SignUpViewController.swift */; };
@@ -85,6 +90,11 @@
 		C67CC8B52D06E6A4005D1F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C67CC8B62D06E6A4005D1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C67CC8B72D06E6A4005D1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C682A3042D50FB5900C6CFB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C682A3132D5168B300C6CFB9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C682A3172D516AB300C6CFB9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C682A3192D516EB500C6CFB9 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C682A31B2D5170AC00C6CFB9 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C68CE0062D071CDB0060AC86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C68CE0082D07200F0060AC86 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +178,7 @@
 		C67CC8282D064DD1005D1F80 = {
 			isa = PBXGroup;
 			children = (
+				C682A3032D50FB3900C6CFB9 /* Model */,
 				C67CC8332D064DD1005D1F80 /* CepteBilet */,
 				C67CC8C72D06E6BB005D1F80 /* Storyboard */,
 				C67CC8852D06E63C005D1F80 /* Delegate */,
@@ -247,6 +258,18 @@
 				C67CC8B22D06E6A4005D1F80 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C682A3032D50FB3900C6CFB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C682A3042D50FB5900C6CFB9 /* User.swift */,
+				C682A3132D5168B300C6CFB9 /* Category.swift */,
+				C682A3172D516AB300C6CFB9 /* Event.swift */,
+				C682A3192D516EB500C6CFB9 /* Review.swift */,
+				C682A31B2D5170AC00C6CFB9 /* Filter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,15 +419,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */,
+				C682A3182D516AB300C6CFB9 /* Event.swift in Sources */,
 				C6FE2E862D12BF12007B506F /* ReviewViewController.swift in Sources */,
 				C643ECA52D0A483400CB0424 /* FilterViewController.swift in Sources */,
 				C643EC8D2D08F1D100CB0424 /* CategoryCollectionViewCell.swift in Sources */,
+				C682A3052D50FB5900C6CFB9 /* User.swift in Sources */,
 				C643ECA32D0A1BD000CB0424 /* CategoryDetailCollectionViewCell.swift in Sources */,
 				C6FE2E682D106E6C007B506F /* TicketsViewController.swift in Sources */,
+				C682A3142D5168B300C6CFB9 /* Category.swift in Sources */,
 				C643EC852D08EAAA00CB0424 /* HomePageTheatreCollectionViewCell.swift in Sources */,
 				C667ED912D1E0DD70063C971 /* PaymentViewController.swift in Sources */,
 				C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */,
 				C643EC8F2D09B53200CB0424 /* CategoryDetailViewController.swift in Sources */,
+				C682A31A2D516EB500C6CFB9 /* Review.swift in Sources */,
 				C6FE2E6A2D11A9E8007B506F /* TicketsCollectionViewCell.swift in Sources */,
 				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,
@@ -412,6 +439,7 @@
 				C643EC892D08EAE500CB0424 /* HomePageCategoryCollectionViewCell.swift in Sources */,
 				C667EDA32D25F36B0063C971 /* LocationViewController.swift in Sources */,
 				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
+				C682A31C2D5170AC00C6CFB9 /* Filter.swift in Sources */,
 				C62A2B8B2D12CBFA00D369D7 /* ReviewTableViewCell.swift in Sources */,
 				C643EC9F2D0A196800CB0424 /* DetailViewController.swift in Sources */,
 				C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */,
