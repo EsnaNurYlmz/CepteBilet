@@ -34,6 +34,7 @@
 		C682A3182D516AB300C6CFB9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A3172D516AB300C6CFB9 /* Event.swift */; };
 		C682A31A2D516EB500C6CFB9 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A3192D516EB500C6CFB9 /* Review.swift */; };
 		C682A31C2D5170AC00C6CFB9 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682A31B2D5170AC00C6CFB9 /* Filter.swift */; };
+		C68337BB2D537D72001F9D52 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68337BA2D537D72001F9D52 /* PrivacyPolicyViewController.swift */; };
 		C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */; };
 		C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0062D071CDB0060AC86 /* LoginViewController.swift */; };
 		C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0082D07200F0060AC86 /* SignUpViewController.swift */; };
@@ -95,6 +96,7 @@
 		C682A3172D516AB300C6CFB9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C682A3192D516EB500C6CFB9 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C682A31B2D5170AC00C6CFB9 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		C68337BA2D537D72001F9D52 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		C68CE0042D07144F0060AC86 /* ProfileCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C68CE0062D071CDB0060AC86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C68CE0082D07200F0060AC86 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				C65E68D52D1D8D8800B6D9D8 /* TicketsBuyViewController.swift */,
 				C667ED902D1E0DD70063C971 /* PaymentViewController.swift */,
 				C667EDA22D25F36B0063C971 /* LocationViewController.swift */,
+				C68337BA2D537D72001F9D52 /* PrivacyPolicyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				C68CE0072D071CDB0060AC86 /* LoginViewController.swift in Sources */,
 				C643EC8F2D09B53200CB0424 /* CategoryDetailViewController.swift in Sources */,
 				C682A31A2D516EB500C6CFB9 /* Review.swift in Sources */,
+				C68337BB2D537D72001F9D52 /* PrivacyPolicyViewController.swift in Sources */,
 				C6FE2E6A2D11A9E8007B506F /* TicketsCollectionViewCell.swift in Sources */,
 				C67CC8B92D06E6A4005D1F80 /* AppDelegate.swift in Sources */,
 				C68CE0092D07200F0060AC86 /* SignUpViewController.swift in Sources */,

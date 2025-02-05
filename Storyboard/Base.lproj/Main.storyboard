@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uoy-oR-042">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3me-bB-J0d">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -161,6 +161,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" cornerStyle="small">
                                     <color key="baseBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="chechBoxTapped:" destination="3me-bB-J0d" eventType="touchUpInside" id="KMh-6j-OU3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kişisel Verilerin Korunması Hakkında Bilgilendirme metnini okudum ve içeriğini anladım." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-my-glh">
                                 <rect key="frame" x="44" y="546" width="339" height="28.666666666666629"/>
@@ -183,10 +186,13 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Üye Ol" cornerStyle="large">
                                     <color key="baseBackgroundColor" systemColor="tableCellBlueTextColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="3me-bB-J0d" eventType="touchUpInside" id="Ank-m1-GS4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qhh-5k-wQO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="J1t-my-glh" firstAttribute="leading" secondItem="FnV-Wf-yRU" secondAttribute="trailing" constant="8" symbolic="YES" id="08g-Tp-VhC"/>
                             <constraint firstItem="KyT-dC-aaV" firstAttribute="leading" secondItem="ao4-Kl-X4t" secondAttribute="trailing" constant="19" id="2OQ-16-RH2"/>
@@ -229,10 +235,95 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mwt-Cg-JGk"/>
+                    <connections>
+                        <outlet property="CheckBox" destination="FnV-Wf-yRU" id="rbo-Wa-qyY"/>
+                        <outlet property="birthDateTextField" destination="0ps-FK-zxV" id="4dK-Tb-83E"/>
+                        <outlet property="countryCodeTextField" destination="ao4-Kl-X4t" id="DHe-vX-pO6"/>
+                        <outlet property="emailTextField" destination="sxk-kX-w9E" id="sbB-qU-cz8"/>
+                        <outlet property="genderTextField" destination="EUQ-nl-qlF" id="8VD-S4-lx6"/>
+                        <outlet property="nameTextField" destination="Uc8-gE-ebx" id="YG3-01-fNh"/>
+                        <outlet property="passwordTextField" destination="PNe-s4-ahz" id="wLj-zC-hPM"/>
+                        <outlet property="phoneTextField" destination="KyT-dC-aaV" id="4XT-gG-Hvr"/>
+                        <outlet property="surnameTextField" destination="NnW-dX-FRc" id="yFt-QT-saP"/>
+                        <segue destination="HHm-YB-2Rr" kind="presentation" identifier="privacyVC" id="Zp0-LK-pAT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWv-eg-UWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11191.603053435114" y="-82.394366197183103"/>
+        </scene>
+        <!--Privacy Policy View Controller-->
+        <scene sceneID="hrF-gq-6bX">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyPolicyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HHm-YB-2Rr" customClass="PrivacyPolicyViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wST-oN-K0I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G3J-o6-OyR">
+                                <rect key="frame" x="22" y="150" width="349" height="646"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">1. Veri Sorumlusu ve Amaç
+Bu aydınlatma metni, Cetpe Bilet tarafından 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca hazırlanmıştır. Şirketimiz, kişisel verilerinizi hukuka uygun bir şekilde işlemek ve gizliliğinizi korumak amacıyla gerekli önlemleri almaktadır.
+2. İşlenen Kişisel Veriler
+Tarafımızca aşağıdaki kişisel verileriniz işlenmektedir:
+Ad, soyad, e-posta adresi, telefon numarası
+Kullanıcı davranışı ve işlem geçmişi İlgili ürün ve hizmetlerle bağlantılı diğer bilgiler
+3. Kişisel Verilerin İşlenme Amaçları
+Kişisel verileriniz şu amaçlarla işlenmektedir:
+Talep ve şikâyetlerinizi karşılamak
+Hizmet sunmak ve ürün geliştirmek
+Kanuni yükümlülüklerimizi yerine getirmek
+Size özel kampanya ve bilgilendirmeler yapmak
+4. Kişisel Verilerin Aktarılması
+Kişisel verileriniz yalnızca:
+Hukuken yetkili kamu kurumlarıyla
+İş ortaklarımız ve hizmet aldığımız tedarikçilerle
+paylaşılabilir.
+5. Toplama Yöntemi ve Hukuki Sebebi
+Kişisel verileriniz; web sitesi, mobil uygulamalar, çağrı merkezi ve diğer iletişim kanallarıyla, KVKK’nın 5. ve 6. maddelerine uygun olarak işlenmektedir.
+6. Haklarınız
+KVKK kapsamında aşağıdaki haklara sahipsiniz:
+Kişisel verilerinizin işlenip işlenmediğini öğrenme
+Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme
+Verilerinizin silinmesini veya yok edilmesini talep etme
+İşlemenin kanuna aykırı olması hâlinde zararların giderilmesini talep etme
+7. İletişim
+Kişisel verilerinizle ilgili sorularınız ve talepleriniz için bize ceptebilet@gmail.com üzerinden ulaşabilirsiniz.
+
+Cepte Bilet</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aydınlatma Metni" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRI-PQ-zTE">
+                                <rect key="frame" x="22" y="100" width="164" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZdQ-xi-j3E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G3J-o6-OyR" firstAttribute="leading" secondItem="ZdQ-xi-j3E" secondAttribute="leading" constant="22" id="3gh-Qd-tIS"/>
+                            <constraint firstItem="ZdQ-xi-j3E" firstAttribute="bottom" secondItem="G3J-o6-OyR" secondAttribute="bottom" constant="46" id="8vN-TT-55t"/>
+                            <constraint firstItem="IRI-PQ-zTE" firstAttribute="leading" secondItem="ZdQ-xi-j3E" secondAttribute="leading" constant="22" id="97E-cN-ow2"/>
+                            <constraint firstItem="IRI-PQ-zTE" firstAttribute="top" secondItem="ZdQ-xi-j3E" secondAttribute="top" constant="100" id="Qpz-JT-eGy"/>
+                            <constraint firstItem="ZdQ-xi-j3E" firstAttribute="trailing" secondItem="IRI-PQ-zTE" secondAttribute="trailing" constant="207" id="U1W-qE-VtV"/>
+                            <constraint firstItem="ZdQ-xi-j3E" firstAttribute="trailing" secondItem="G3J-o6-OyR" secondAttribute="trailing" constant="22" id="Xzr-cz-dax"/>
+                            <constraint firstItem="G3J-o6-OyR" firstAttribute="top" secondItem="ZdQ-xi-j3E" secondAttribute="top" constant="150" id="cxf-yW-qeY"/>
+                            <constraint firstItem="G3J-o6-OyR" firstAttribute="top" secondItem="IRI-PQ-zTE" secondAttribute="bottom" constant="23" id="qvf-9m-xxm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hbo-ve-SrQ"/>
+                    <connections>
+                        <outlet property="textView" destination="G3J-o6-OyR" id="rji-o2-hh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hl8-xh-Dkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12084.732824427481" y="-82.394366197183103"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
@@ -1715,14 +1806,14 @@
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="tableCellBlueTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCategoryCell" id="FYe-EF-puN" customClass="ProfileCategoryTableViewCell" customModule="CepteBilet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="49.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYe-EF-puN" id="sw3-i9-s9W">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="49.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-vZ-2Z3">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="26.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="27.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
                                                     <color key="textColor" systemColor="tableCellBlueTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2261,28 +2352,28 @@
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
