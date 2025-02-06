@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3me-bB-J0d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K2g-5E-65j">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="o5m-rc-h2S">
             <objects>
-                <viewController id="K2g-5E-65j" customClass="LoginViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K2g-5E-65j" customClass="LoginViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whp-BJ-qNX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,23 +25,29 @@
                                     <segment title="Üye Ol"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="tableCellBlueTextColor"/>
+                                <connections>
+                                    <action selector="segmentedController:" destination="K2g-5E-65j" eventType="valueChanged" id="54i-nJ-r4y"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-DP-RCO">
                                 <rect key="frame" x="10" y="193" width="373" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-8c-yOr">
                                 <rect key="frame" x="10" y="270" width="373" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh7-6R-25P">
                                 <rect key="frame" x="120" y="428" width="153" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Giriş Yap" cornerStyle="medium"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="K2g-5E-65j" eventType="touchUpInside" id="DDK-jD-ee5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-Z9-gL6">
                                 <rect key="frame" x="0.0" y="492.33333333333331" width="393" height="34.999999999999943"/>
@@ -49,10 +55,13 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Şifremi Unuttum">
                                     <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordTapped:" destination="K2g-5E-65j" eventType="touchUpInside" id="Pe7-Jb-aun"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OF6-Jw-EXl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="3EV-DP-RCO" firstAttribute="top" secondItem="dOb-S9-3fx" secondAttribute="bottom" constant="87" id="4tD-9S-MGG"/>
                             <constraint firstItem="RHV-8c-yOr" firstAttribute="centerX" secondItem="xh7-6R-25P" secondAttribute="centerX" id="4xp-OL-KO6"/>
@@ -73,6 +82,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="8Dq-Si-FCb"/>
                     <connections>
+                        <outlet property="emailTextField" destination="3EV-DP-RCO" id="had-8m-yU0"/>
+                        <outlet property="passwordTextField" destination="RHV-8c-yOr" id="gzg-NU-Ih5"/>
+                        <outlet property="segmentedController" destination="dOb-S9-3fx" id="Sda-Za-0aQ"/>
                         <segue destination="3me-bB-J0d" kind="show" id="h0y-Ed-dU6"/>
                     </connections>
                 </viewController>
@@ -83,7 +95,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="nHc-rE-SrY">
             <objects>
-                <viewController id="3me-bB-J0d" customClass="SignUpViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3me-bB-J0d" customClass="SignUpViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uNs-Rj-HsM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +122,7 @@
                                     <constraint firstAttribute="height" constant="34" id="yc2-Bf-vRe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PNe-s4-ahz">
                                 <rect key="frame" x="10" y="382" width="373" height="34"/>
@@ -118,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="34" id="sQR-e2-XhJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ülke Kodu*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-Kl-X4t">
                                 <rect key="frame" x="10" y="434" width="96" height="34"/>
@@ -128,7 +140,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefon Numarası*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyT-dC-aaV">
                                 <rect key="frame" x="125" y="434" width="258" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doğum Tarihi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ps-FK-zxV">
                                 <rect key="frame" x="10" y="488" width="157" height="34"/>
@@ -178,6 +190,9 @@
                                     <segment title="Üye Ol"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="tableCellBlueTextColor"/>
+                                <connections>
+                                    <action selector="segmentedController:" destination="3me-bB-J0d" eventType="valueChanged" id="2tg-wH-sN3"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5Q-Tj-qRS">
                                 <rect key="frame" x="125" y="627" width="143" height="35"/>
@@ -244,6 +259,7 @@
                         <outlet property="nameTextField" destination="Uc8-gE-ebx" id="YG3-01-fNh"/>
                         <outlet property="passwordTextField" destination="PNe-s4-ahz" id="wLj-zC-hPM"/>
                         <outlet property="phoneTextField" destination="KyT-dC-aaV" id="4XT-gG-Hvr"/>
+                        <outlet property="segmentedController" destination="fNo-w1-FuY" id="1s3-Q9-8K9"/>
                         <outlet property="surnameTextField" destination="NnW-dX-FRc" id="yFt-QT-saP"/>
                         <segue destination="HHm-YB-2Rr" kind="presentation" identifier="privacyVC" id="Zp0-LK-pAT"/>
                     </connections>
@@ -328,7 +344,7 @@ Cepte Bilet</mutableString>
         <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="ViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
     @IBOutlet weak var birthDateTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var CheckBox: UIButton!
+    @IBOutlet weak var segmentedController: UISegmentedControl!
     
     var isTermsAccepted = false
     let countryCode = ["+1 (Kanada)", "+44 (Birleşik Krallık)", "+49 (Almanya)", "+90 (Türkiye)","+61 (Avustralya)", "+994 (Azerbaycan)", "+32 (Belçika)", "+55 (Brezilya)","+45 (Danimarka)", "+62 (Endonezya)", "+33 (Fransa)", "+27 (Güney Afrika)","+91 (Hindistan)","+34 (İspanya)", "+46 (İşveç)", "+41 (İşviçre)", "+39 (İtalya)","+57 (Kolombiya)","+53 (Küba)", "+36 (Macaristan)", "+52 (Meksika)", "+20 (Mısır)","+47 (Norveç)","+48 (Polonya)", "+351 (Portekiz)", "+40 (Romanya)", "+66 (Tanzanya)","+84 (Vietnam)"]
@@ -37,6 +38,8 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
         
         countryCodeTextField.inputView = countryPicker
         genderTextField.inputView = genderPicker
+        
+        segmentedController.selectedSegmentIndex = 1
         
         setupDatePicker()
         setupTapGesture()
@@ -191,4 +194,16 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
             }
         }.resume()
     }
+    
+    @IBAction func segmentedController(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                        loginVC.modalPresentationStyle = .fullScreen
+                        present(loginVC, animated: true, completion: nil)
+                    }
+                }
+    }
+    
+   
 }
