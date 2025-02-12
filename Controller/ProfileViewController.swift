@@ -37,8 +37,24 @@ extension ProfileViewController: UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
-   /* func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Seçilen Satır: \(indexPath.row)")
+        ProfileCategoryTableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: "toLogin", sender: nil)
+            case 1:
+                performSegue(withIdentifier: "toProfileUpdate", sender: nil)
+            case 2:
+                performSegue(withIdentifier: "toTickets", sender: nil)
+            case 3:
+                print("çıkış yapıldı")
+            default:
+                break
+            }
     }
-    */
+    
+    
+    
 }

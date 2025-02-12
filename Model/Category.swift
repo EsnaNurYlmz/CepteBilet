@@ -7,17 +7,19 @@
 
 import Foundation
 
-class Category {
+class Category : Codable {
     
     var categoryID : String?
     var categoryName : String?
+    var categoryImage : String?
     
     init(){
     }
     
-    init(categoryID: String, categoryName: String) {
+    init(categoryID: String, categoryName: String, categoryImage : String) {
         self.categoryID = categoryID
         self.categoryName = categoryName
+        self.categoryImage = categoryImage
     }
     
 }

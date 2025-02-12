@@ -14,6 +14,7 @@ class User : Codable {
     var userSurname : String?
     var userEmail : String?
     var userPassword : String?
+    var countryCode : String?
     var userPhoneNumber : String?
     var userGender : String?
     var userBirthDate : Date?
@@ -21,12 +22,13 @@ class User : Codable {
     init(){
     }
     
-    init(userID: String , userName: String , userSurname: String , userEmail: String , userPassword: String , userPhoneNumber: String , userGender: String , userBirthDate: Date ) {
+    init(userID: String , userName: String , userSurname: String , userEmail: String , userPassword: String , countryCode : String, userPhoneNumber: String , userGender: String , userBirthDate: Date ) {
         self.userID = userID
         self.userName = userName
         self.userSurname = userSurname
         self.userEmail = userEmail
         self.userPassword = userPassword
+        self.countryCode = countryCode
         self.userPhoneNumber = userPhoneNumber
         self.userGender = userGender
         self.userBirthDate = userBirthDate

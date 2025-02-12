@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var HomePageCategoryCollectionView: UICollectionView!
     
-    let advert = ["advert2","advert1","advert3","advert4","advert6","advert5","advert7"]
+    let advert = ["advert2","advert3","advert4","advert6","advert5","advert7"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Event {
+class Event : Codable {
     
     var eventID : String?
     var eventName : String?

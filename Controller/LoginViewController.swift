@@ -84,8 +84,8 @@ class LoginViewController: UIViewController {
         }.resume()
     }
     @IBAction func forgotPasswordTapped(_ sender: Any) {
+        performSegue(withIdentifier: "toProfileUpdate", sender: nil)
     }
-    
     @IBAction func segmentedController(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 1 {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -95,5 +95,7 @@ class LoginViewController: UIViewController {
                     }
          }
     }
+    
+   
     
 }

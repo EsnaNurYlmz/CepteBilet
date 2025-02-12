@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Filter {
+class Filter : Codable{
     
     var city : String?
     var location : String?

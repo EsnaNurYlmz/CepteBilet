@@ -153,7 +153,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
                     showAlert(message: "Üyeliği tamamlamak için kişisel verilerin korunması şartını kabul etmelisiniz!")
                     return
                 }
-        let user = User(userID: UUID().uuidString, userName: name, userSurname: surname, userEmail: email, userPassword: password, userPhoneNumber: phone, userGender: gender, userBirthDate: datePicker.date)
+        let user = User(userID: UUID().uuidString, userName: name, userSurname: surname, userEmail: email, userPassword: password, countryCode: countryCode, userPhoneNumber: phone, userGender: gender, userBirthDate: datePicker.date)
          registerUser(user : user)
         
         showAlert(message: "Üyeliğiniz başarıyla tamamlandı. Hoş geldiniz!")
