@@ -9,4 +9,6 @@ import UIKit
 
 class CategoryDetailRecommendedCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var categoryDetailRecommendEventName: UILabel!
+    @IBOutlet weak var categoryDetailRecommendImage: UIImageView!
 }

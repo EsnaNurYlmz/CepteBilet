@@ -9,28 +9,29 @@ import Foundation
 
 class Event : Codable {
     
-    var eventID : String?
-    var eventName : String?
-    var eventDate : Date?
-    var eventLocation : String?
-    var eventDetail : String?
-    var eventImage : String?
-    var eventPrice : String?
-    var artistName : String?
+    let eventID : String?
+    let eventName : String?
+    let eventDate : String?
+    let eventLocation : String?
+    let eventType : String?
+    let eventImage : String?
+    let eventPrice : String?
+    let artistName : String?
     var eventCategory : Category?
+    var isFavorite: Bool
+   
     
-    init(){
-    }
     
-    init(eventID: String, eventName: String, eventDate: Date, eventLocation: String, eventDetail: String, eventImage: String, eventPrice: String, artistName: String, eventCategory: Category) {
+    init(eventID: String, eventName: String, eventDate: String, eventLocation: String, eventType: String, eventImage: String, eventPrice: String, artistName: String, eventCategory: Category , isFavorite: Bool) {
         self.eventID = eventID
         self.eventName = eventName
         self.eventDate = eventDate
         self.eventLocation = eventLocation
-        self.eventDetail = eventDetail
+        self.eventType = eventType
         self.eventImage = eventImage
         self.eventPrice = eventPrice
         self.artistName = artistName
         self.eventCategory = eventCategory
+        self.isFavorite   = isFavorite
     }
 }

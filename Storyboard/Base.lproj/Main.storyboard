@@ -718,7 +718,7 @@ Cepte Bilet</string>
         <!--Category Detail View Controller-->
         <scene sceneID="Fgx-No-BYR">
             <objects>
-                <viewController id="1NT-Bc-BSt" customClass="CategoryDetailViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1NT-Bc-BSt" customClass="CategoryDetailViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ChB-95-pxz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -739,7 +739,7 @@ Cepte Bilet</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mVI-HE-0ug">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategpryRecommendedCell" id="mVI-HE-0ug" customClass="CategoryDetailRecommendedCollectionViewCell" customModule="CepteBilet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XND-h3-HnS">
@@ -768,6 +768,10 @@ Cepte Bilet</string>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="165"/>
+                                        <connections>
+                                            <outlet property="categoryDetailRecommendEventName" destination="gNw-de-MGS" id="lhg-Vs-5QS"/>
+                                            <outlet property="categoryDetailRecommendImage" destination="tSO-w9-pSf" id="sJe-Cd-tka"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -781,7 +785,7 @@ Cepte Bilet</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8y4-Mg-cng">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryDetailCell" id="8y4-Mg-cng" customClass="CategoryDetailCollectionViewCell" customModule="CepteBilet" customModuleProvider="target">
                                         <rect key="frame" x="2" y="0.0" width="389" height="183"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cv4-GJ-Fij">
@@ -813,6 +817,9 @@ Cepte Bilet</string>
                                                     <rect key="frame" x="333" y="96" width="45" height="28"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="FavoriteButton:" destination="8y4-Mg-cng" eventType="touchUpInside" id="ILS-Yw-kju"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mekan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBP-f5-7gC">
                                                     <rect key="frame" x="8" y="146" width="371" height="27"/>
@@ -848,6 +855,14 @@ Cepte Bilet</string>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="389" height="183"/>
+                                        <connections>
+                                            <outlet property="FavoriteButton" destination="y84-8z-zFV" id="aoB-Ly-Cl8"/>
+                                            <outlet property="categoryDetailDate" destination="VI4-pg-s3L" id="gu8-Zx-Y36"/>
+                                            <outlet property="categoryDetailImage" destination="UFi-YZ-Hpj" id="PbD-aw-cYA"/>
+                                            <outlet property="categoryDetailLocation" destination="IBP-f5-7gC" id="B5e-cS-v6q"/>
+                                            <outlet property="categoryDetailType" destination="FfV-ZZ-NId" id="hqV-hF-8jH"/>
+                                            <outlet property="categpryDetailEventName" destination="8Xi-XN-fle" id="fSH-uc-7Ho"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -856,6 +871,9 @@ Cepte Bilet</string>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease" catalog="system" title="Filtrele"/>
+                                <connections>
+                                    <action selector="FilterButton:" destination="1NT-Bc-BSt" eventType="touchUpInside" id="5zv-2a-BEC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="svU-Cb-gkz"/>
@@ -880,7 +898,9 @@ Cepte Bilet</string>
                     </view>
                     <navigationItem key="navigationItem" id="3s4-1w-3gF"/>
                     <connections>
-                        <segue destination="MIW-8u-sfa" kind="show" id="axU-P6-vxE"/>
+                        <outlet property="CategoryDetailEventCollectionView" destination="jqg-W0-9lJ" id="5dV-bl-nm7"/>
+                        <outlet property="categoryDetailRecommendedCollectionView" destination="giI-R3-hLi" id="DdU-IA-JF3"/>
+                        <segue destination="MIW-8u-sfa" kind="show" identifier="toDetailFilter" id="axU-P6-vxE"/>
                         <segue destination="pEq-6u-Mjh" kind="show" id="xJf-fp-U1h"/>
                     </connections>
                 </viewController>
@@ -1822,14 +1842,14 @@ Cepte Bilet</string>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="tableCellBlueTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCategoryCell" id="FYe-EF-puN" customClass="ProfileCategoryTableViewCell" customModule="CepteBilet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="49.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYe-EF-puN" id="sw3-i9-s9W">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="49.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-vZ-2Z3">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="26.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="27.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
                                                     <color key="textColor" systemColor="tableCellBlueTextColor"/>
                                                     <nil key="highlightedColor"/>

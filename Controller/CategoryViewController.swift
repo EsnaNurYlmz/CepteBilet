@@ -25,19 +25,31 @@ class CategoryViewController: UIViewController {
     }
     
     func fetchCategories(){
-        let urlString  = " htpp:/...."
-        guard let url = URL(string: urlString) else {return}
-        URLSession.shared.dataTask(with: url) { data , _, error in
-            guard let data = data, error == nil else { return }
-            let categories = try? JSONDecoder().decode([Category].self, from: data)
+        let urlString = "https://api.example.com/categories"
+            guard let url = URL(string: urlString) else { return }
             
-            DispatchQueue.main.async {
-                self.categories = categories ?? []
-                self.filteredCategories = self.categories
-                self.CategoryCollectionView.reloadData()
+            URLSession.shared.dataTask(with: url) { data, _, error in
+                if let error = error {
+                    print("Network Error: \(error.localizedDescription)")
+                    return
+                }
                 
-            }
-        }.resume()
+                guard let data = data else {
+                    print("Error: No data received")
+                    return
+                }
+                
+                do {
+                    let categories = try JSONDecoder().decode([Category].self, from: data)
+                    DispatchQueue.main.async {
+                        self.categories = categories
+                        self.filteredCategories = self.categories
+                        self.CategoryCollectionView.reloadData()
+                    }
+                } catch {
+                    print("JSON Decode Error: \(error.localizedDescription)") 
+                }
+            }.resume()
     }
 }
 extension CategoryViewController :  UICollectionViewDelegate , UICollectionViewDataSource , UISearchBarDelegate{
@@ -54,12 +66,21 @@ extension CategoryViewController :  UICollectionViewDelegate , UICollectionViewD
         cell.getCategory(with: category)
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCategory = filteredCategories[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let categoryDetailVC  = storyboard.instantiateViewController(withIdentifier: "CategoryDetailVC") as? CategoryDetailViewController {
+            categoryDetailVC.selectedCategory = selectedCategory
+            navigationController?.pushViewController(categoryDetailVC, animated: true)
+        }
+            
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             filteredCategories = categories
         }else{
-            filteredCategories = categories.filter { $0.categoryName!.lowercased().contains(searchText.lowercased()) }
+            filteredCategories = categories.filter { ($0.categoryName ?? "").lowercased().contains(searchText.lowercased()) }
         }
         CategoryCollectionView.reloadData()
     }
