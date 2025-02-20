@@ -71,7 +71,6 @@ class CategoryDetailCollectionViewCell: UICollectionViewCell {
             }.resume()
         }
     
-    
     @IBAction func FavoriteButton(_ sender: UIButton) {
         guard let event = event else {return}
         isfavorite.toggle()

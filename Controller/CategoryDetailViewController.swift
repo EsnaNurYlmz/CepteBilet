@@ -13,6 +13,7 @@ class CategoryDetailViewController: UIViewController {
     @IBOutlet weak var categoryDetailRecommendedCollectionView: UICollectionView!
     @IBOutlet weak var CategoryDetailEventCollectionView: UICollectionView!
     
+    
     var events : [Event] = []
     var selectedCategory : Category?
     
@@ -22,7 +23,6 @@ class CategoryDetailViewController: UIViewController {
         CategoryDetailEventCollectionView.delegate = self
         CategoryDetailEventCollectionView.dataSource = self
 
-      
     }
     
     func fetchEvent(){
@@ -51,14 +51,9 @@ class CategoryDetailViewController: UIViewController {
         }.resume()
     }
     
-    
-    
-    
-
     @IBAction func FilterButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toDetailFilter", sender: nil)
     }
-    
 
 }
 extension CategoryDetailViewController : UICollectionViewDelegate , UICollectionViewDataSource {
@@ -75,7 +70,4 @@ extension CategoryDetailViewController : UICollectionViewDelegate , UICollection
         cell.configure(with : event)
         return cell
     }
-    
-    
-    
 }

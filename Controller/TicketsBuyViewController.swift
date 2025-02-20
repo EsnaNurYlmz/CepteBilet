@@ -9,6 +9,7 @@ import UIKit
 
 class TicketsBuyViewController: UIViewController {
 
+    var event : Event?
     override func viewDidLoad() {
         super.viewDidLoad()
 
