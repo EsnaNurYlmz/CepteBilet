@@ -22,7 +22,8 @@ class CategoryDetailViewController: UIViewController {
         
         CategoryDetailEventCollectionView.delegate = self
         CategoryDetailEventCollectionView.dataSource = self
-
+        fetchEvent()
+        
     }
     
     func fetchEvent(){
@@ -39,9 +40,9 @@ class CategoryDetailViewController: UIViewController {
                 return
             }
             do {
-                let events = try JSONDecoder().decode([Event].self, from: data)
+                let fetchedEvents = try JSONDecoder().decode([Event].self, from: data)
                 DispatchQueue.main.async {
-                    self.events = events
+                    self.events = fetchedEvents
                     self.CategoryDetailEventCollectionView.reloadData()
                 }
             }
@@ -54,20 +55,34 @@ class CategoryDetailViewController: UIViewController {
     @IBAction func FilterButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toDetailFilter", sender: nil)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEventDetail",
+           let destinationVC = segue.destination as? DetailViewController,
+                  let selectedEvent = sender as? Event {
+                   destinationVC.eventID = selectedEvent.eventID
+               }
+    }
 }
 extension CategoryDetailViewController : UICollectionViewDelegate , UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return events.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = CategoryDetailEventCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryDetailCell", for: indexPath) as! CategoryDetailCollectionViewCell
         let event = events[indexPath.row]
         cell.configure(with : event)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedEvent = events[indexPath.row]
+        performSegue(withIdentifier: "toEventDetail", sender: selectedEvent)
     }
 }

@@ -11,8 +11,6 @@ class ProfileUpdateViewController: UIViewController {
 
     @IBOutlet weak var newNameTextField: UITextField!
     @IBOutlet weak var newSurnameTextField: UITextField!
-    @IBOutlet weak var newBirthDateTextField: UITextField!
-    @IBOutlet weak var newGenderTextField: UITextField!
     @IBOutlet weak var newCountryCodeTextField: UITextField!
     @IBOutlet weak var newPhoneNumberTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
@@ -21,146 +19,117 @@ class ProfileUpdateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUserIdFromBackend()
-    
-        userId = UserDefaults.standard.string(forKey: "userID")
     }
     
     @IBAction func profileUpdateTapped(_ sender: UIButton) {
-        updateProfile()
+        guard let userId = userId else {
+            showAlert(title: "Hata", message: "Kullanıcı ID bulunamadı")
+            return
+        }
+        
+        let updateUser = User()
+        updateUser.userID = userId
+        updateUser.userName = newNameTextField.text?.isEmpty == false ? newNameTextField.text : nil
+        updateUser.userSurname = newSurnameTextField.text?.isEmpty == false ? newSurnameTextField.text : nil
+        updateUser.countryCode = newCountryCodeTextField.text?.isEmpty == false ? newCountryCodeTextField.text : nil
+        updateUser.userPhoneNumber  = newPhoneNumberTextField.text?.isEmpty == false ? newPhoneNumberTextField.text : nil
+        updateUserProfile(user: updateUser)
     }
     
     @IBAction func passwordUpdateTapped(_ sender: UIButton) {
-    }
-    func fetchUserIdFromBackend() {
-            guard let url = URL(string: "https://api.example.com/getUserId") else { return }
-            
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                DispatchQueue.main.async {
-                    if let error = error {
-                        self.showAlert(message: "Kullanıcı kimliği alınamadı: \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    if let data = data, let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-                       let id = json["userId"] as? String {
-                        self.userId = id
-                    } else {
-                        self.showAlert(message: "Kullanıcı kimliği alınamadı.")
-                    }
-                }
-            }
-            task.resume()
+        guard let userId = userId else {
+            showAlert(title: "Hata", message: "Kullanıcı ID bulunamadı")
+            return
         }
-    
-    func updateProfile() {
-        
-        guard let userId = userId else {
-                   showAlert(message: "Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.")
-                   return
-               }
-               
-               let url = URL(string: "https://api.example.com/users/\(userId)")!
-               var updateData = [String: Any]()
-               
-               if let newName = newNameTextField.text, !newName.isEmpty {
-                   updateData["userName"] = newName
-               }
-               if let newSurname = newSurnameTextField.text, !newSurname.isEmpty {
-                   updateData["userSurname"] = newSurname
-               }
-               if let newBirthDate = newBirthDateTextField.text, !newBirthDate.isEmpty {
-                   updateData["userBirthDate"] = newBirthDate
-               }
-               if let newGender = newGenderTextField.text, !newGender.isEmpty {
-                   updateData["userGender"] = newGender
-               }
-               if let newCountryCode = newCountryCodeTextField.text, !newCountryCode.isEmpty {
-                   updateData["countryCode"] = newCountryCode
-               }
-               if let newPhoneNumber = newPhoneNumberTextField.text, !newPhoneNumber.isEmpty {
-                   updateData["userPhoneNumber"] = newPhoneNumber
-               }
-               
-               guard !updateData.isEmpty else {
-                   showAlert(message: "Lütfen güncellemek istediğiniz bilgileri girin.")
-                   return
-               }
-               
-               sendPatchRequest(url: url, data: updateData) { success in
-                   if success {
-                       self.showAlert(message: "Profil başarıyla güncellendi!")
-                   } else {
-                       self.showAlert(message: "Profil güncelleme başarısız.")
-                   }
-               }
+        guard let newPassword = newPasswordTextField.text , !newPassword.isEmpty else {
+            showAlert(title: "Hata", message: "Yeni şifre giriniz.")
+            return
+        }
+        updateUserPassword(userId: userId, newPassword: newPassword)
     }
-    
-    func updatePassword() {
-        guard let userId = userId else {
-                    showAlert(message: "Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.")
+     
+    func updateUserProfile( user : User ) {
+        let url = URL(string: "https://yourapi.com/api/users/update")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+                    let jsonData = try JSONEncoder().encode(user)
+                    request.httpBody = jsonData
+                } catch {
+                    showAlert(title: "Hata", message: "Veriler işlenirken bir hata oluştu!")
                     return
                 }
-                
-                let url = URL(string: "https://api.example.com/users/\(userId)/password")!
-                
-                guard let newPassword = newPasswordTextField.text, !newPassword.isEmpty else {
-                    showAlert(message: "Yeni şifreyi girin.")
-                    return
-                }
-                
-                let updatedData: [String: Any] = ["password": newPassword]
-                
-                sendPatchRequest(url: url, data: updatedData) { success in
-                    if success {
-                        self.showAlert(message: "Şifre başarıyla güncellendi!")
-                    } else {
-                        self.showAlert(message: "Şifre güncelleme başarısız.")
-                    }
-                }
-        }
-        
-
-        func sendPatchRequest(url: URL, data: [String: Any], completion: @escaping (Bool) -> Void) {
-            var request = URLRequest(url: url)
-                    request.httpMethod = "PATCH"
-                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                    
-                    do {
-                        request.httpBody = try JSONSerialization.data(withJSONObject: data)
-                    } catch {
-                        print("JSON Serialization error: \(error.localizedDescription)")
-                        completion(false)
-                        return
-                    }
-                    
-                    let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                        DispatchQueue.main.async {
-                            if let error = error {
-                                self.showAlert(message: "Hata oluştu: \(error.localizedDescription)")
-                                completion(false)
-                                return
-                            }
-                            
-                            if let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) {
-                                completion(true)
-                            } else {
-                                completion(false)
-                            }
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    DispatchQueue.main.async {
+                        if let error = error {
+                            self.showAlert(title: "Bağlantı Hatası", message: error.localizedDescription)
+                            return
+                        }
+                        
+                        guard let httpResponse = response as? HTTPURLResponse else {
+                            self.showAlert(title: "Hata", message: "Geçersiz sunucu yanıtı!")
+                            return
+                        }
+                        
+                        if httpResponse.statusCode == 200 {
+                            self.showAlert(title: "Başarılı", message: "Profil başarıyla güncellendi!")
+                        } else {
+                            self.showAlert(title: "Hata", message: "Güncelleme başarısız, hata kodu: \(httpResponse.statusCode)")
                         }
                     }
-                    
-                    task.resume()
-        }
-    
-    func showAlert(message : String){
-        let alert = UIAlertController(title: "Bilgi", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Tamam", style: .default))
-        present(alert, animated: true)
+                }
+                task.resume()
     }
     
-
+    func updateUserPassword( userId : String , newPassword : String){
+        
+        let url = URL(string: "https://yourapi.com/api/users/updatePassword")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let passwordUpdateData: [String: Any] = [
+                    "userID": userId,
+                    "newPassword": newPassword
+                ]
+        do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: passwordUpdateData, options: [])
+                    request.httpBody = jsonData
+                } catch {
+                    showAlert(title: "Hata", message: "Veriler işlenirken bir hata oluştu!")
+                    return
+                }
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    DispatchQueue.main.async {
+                        if let error = error {
+                            self.showAlert(title: "Bağlantı Hatası", message: error.localizedDescription)
+                            return
+                        }
+                        
+                        guard let httpResponse = response as? HTTPURLResponse else {
+                            self.showAlert(title: "Hata", message: "Geçersiz sunucu yanıtı!")
+                            return
+                        }
+                        
+                        if httpResponse.statusCode == 200 {
+                            self.showAlert(title: "Başarılı", message: "Şifre başarıyla güncellendi!")
+                        } else {
+                            self.showAlert(title: "Hata", message: "Şifre güncelleme başarısız, hata kodu: \(httpResponse.statusCode)")
+                        }
+                    }
+                }
+                
+                task.resume()
+    }
+    
+    func showAlert(title: String, message: String) {
+           let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+           DispatchQueue.main.async {
+               self.present(alert, animated: true, completion: nil)
+           }
+       }
 }

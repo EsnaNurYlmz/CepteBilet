@@ -79,11 +79,12 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
         formatter.dateFormat = "dd-MM-yyyy"
         birthDateTextField.text = formatter.string(from: datePicker.date)
         }
+    
     func setupTapGesture() {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissPicker))
             view.addGestureRecognizer(tapGesture)
         }
-
+    
     @objc func dismissPicker() {
             view.endEditing(true) // Aktif olan picker veya klavyeyi kapatır.
         }
@@ -99,6 +100,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
             return genderType.count
         }
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == countryPicker{
             return countryCode[row]
@@ -107,6 +109,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
             return genderType[row]
         }
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == countryPicker{
             let fullCode = countryCode[row]
@@ -136,7 +139,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
                 }
             }
     }
-  
+    
     @IBAction func signUpTapped(_ sender: UIButton) {
         guard  let name = nameTextField.text, !name.isEmpty,
                let surname = surnameTextField.text, !surname.isEmpty,
@@ -155,9 +158,6 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
                 }
         let user = User(userID: UUID().uuidString, userName: name, userSurname: surname, userEmail: email, userPassword: password, countryCode: countryCode, userPhoneNumber: phone, userGender: gender, userBirthDate: datePicker.date)
          registerUser(user : user)
-        
-        showAlert(message: "Üyeliğiniz başarıyla tamamlandı. Hoş geldiniz!")
-       
     }
     func showAlert(message: String) {
            let alert = UIAlertController(title: "Uyarı", message: message, preferredStyle: .alert)
@@ -167,32 +167,65 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
        
     
     func registerUser (user : User) {
-        let url = URL(string: "https://your-api-endpoint.com/register")!
-        
-        var request = URLRequest(url : url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let body: [String: Any] = [
-                    "name": user.userName ?? "",
-                    "surname": user.userSurname ?? "",
-                    "email": user.userEmail ?? "",
-                    "password": user.userPassword ?? "",
-                    "phone": user.userPhoneNumber ?? "",
-                    "countryCode": user.userID ?? "",
-                    "gender": user.userGender ?? "",
-                    "birthDate": ISO8601DateFormatter().string(from: user.userBirthDate ?? Date())
-                ]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        URLSession.shared.dataTask(with: request) { data , response , error in
-            if let error = error {
-            print("Error: \(error.localizedDescription)") // Hata varsa yazdırılır.
-            return
+        let url = URL(string: "http://localhost:8080/user/register")!
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let body: [String: Any] = [
+                "userID": user.userPhoneNumber ?? "",
+                "userName": user.userName ?? "",
+                "userSurname": user.userSurname ?? "",
+                "userEmail": user.userEmail ?? "",
+                "userPassword": "\(user.userPassword ?? "")",
+                "countryCode": user.countryCode ?? "",
+                "userPhoneNumber": user.userPhoneNumber ?? "",
+                "userGender": user.userGender ?? "",
+                "userBirthDate": formatDateToString(user.userBirthDate!)
+            ]
+            
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+                request.httpBody = jsonData
+            } catch {
+                print("JSON Serialization Hatası: \(error.localizedDescription)")
+                showAlert(message: "Bir hata oluştu. Lütfen tekrar deneyin.")
+                return
             }
-            if let data = data, let responseString = String(data: data, encoding: .utf8) {
-            print("Response: \(responseString)") // API yanıtı yazdırılır.
-            }
-        }.resume()
+
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self.showAlert(message: "Bağlantı hatası: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    guard let httpResponse = response as? HTTPURLResponse else {
+                        self.showAlert(message: "Geçersiz yanıt alındı.")
+                        return
+                    }
+                    
+                    if let data = data {
+                        do {
+                            let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                            print("Response: \(jsonResponse)")
+                            
+                            if httpResponse.statusCode == 200 {
+                                self.showAlertWithAction(message: "Üyelik başarılı! Giriş ekranına yönlendiriliyorsunuz.") {
+                                    self.navigateToLoginScreen()
+                                }
+                            } else {
+                                self.showAlert(message: "Kayıt başarısız: \(jsonResponse)")
+                            }
+                        } catch {
+                            self.showAlert(message: "Yanıt işlenirken hata oluştu: \(error.localizedDescription)")
+                        }
+                    } else {
+                        self.showAlert(message: "Boş yanıt alındı.")
+                    }
+                }
+            }.resume()
     }
     
     @IBAction func segmentedController(_ sender: UISegmentedControl) {
@@ -204,6 +237,26 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
                     }
                 }
     }
-    
-   
+    func formatDateToString(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd" // Backend'in beklediği tarih formatı olabilir, gerekirse değiştir
+        formatter.locale = Locale(identifier: "en_US_POSIX") // Tarih hatalarını önlemek için
+        return formatter.string(from: date)
+    }
+    func navigateToLoginScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+        }
+    }
+    func showAlertWithAction(message: String, completion: @escaping () -> Void) {
+        let alert = UIAlertController(title: "Başarılı", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Tamam", style: .default) { _ in
+            completion()
+        })
+        present(alert, animated: true)
+    }
+
+
 }

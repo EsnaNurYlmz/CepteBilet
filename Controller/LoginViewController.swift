@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
             return
         }
         loginUser(email: email, password: password)
-        showAlert(message: "Giriş Yaptınız. Hoş Geldiniz!")
+       
     }
     
     func showAlert(message : String) {
@@ -56,32 +56,60 @@ class LoginViewController: UIViewController {
     }
     
     func loginUser(email: String , password: String) {
-        
-        let url  = URL(string: "https://your-api-endpoint.com/login")!
+    
+        let url  = URL(string: "http://localhost:8080/user/login")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let body: [String: Any] = [
-                    "email": email,
-                    "password": password
+                    "userEmail": email,
+                    "userPassword": password
                 ]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        
-        URLSession.shared.dataTask(with: request) { data , response , error in
-            if let error = error {
-                            print("Error: \(error.localizedDescription)")
-                            return
+        do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: body)
+            } catch {
+                showAlert(message: "JSON oluşturulurken hata oluştu.")
+                return
             }
-            if let data = data, let responseString = String(data: data, encoding: .utf8) {
-                            print("Response: \(responseString)")
-                            
-                            // Eğer giriş başarılı ise, ana sayfaya yönlendirme yapabilirsiniz
-                            DispatchQueue.main.async {
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self.showAlert(message: "Bağlantı hatası: \(error.localizedDescription)")
+                        return
                     }
-              }
-            
-        }.resume()
+
+                    guard let httpResponse = response as? HTTPURLResponse else {
+                        self.showAlert(message: "Geçersiz yanıt alındı.")
+                        return
+                    }
+
+                    guard let data = data else {
+                        self.showAlert(message: "Boş yanıt alındı.")
+                        return
+                    }
+        do {
+                    let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                    print("Response: \(jsonResponse)")
+
+                switch httpResponse.statusCode {
+                    case 200:
+                    self.showAlertWithAction(message: "Giriş başarılı! Ana sayfaya yönlendiriliyorsunuz.") {
+                    self.navigateToHomeScreen()  // Ana sayfaya yönlendirme
+                                        }
+                    case 401:
+                    self.showAlert(message: "Hatalı şifre! Lütfen tekrar deneyin.")
+                    case 404:
+                    self.showAlert(message: "Kullanıcı bulunamadı! Lütfen kayıt olun.")
+                    default:
+                    self.showAlert(message: "Hata: \(jsonResponse)")
+                     }
+                    } catch {
+                    self.showAlert(message: "Yanıt işlenirken hata oluştu: \(error.localizedDescription)")
+                                }
+                            }
+                        }.resume()
     }
     @IBAction func forgotPasswordTapped(_ sender: Any) {
         performSegue(withIdentifier: "toProfileUpdate", sender: nil)
@@ -95,7 +123,21 @@ class LoginViewController: UIViewController {
                     }
          }
     }
-    
-   
+    func navigateToHomeScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as? ViewController {
+            homeVC.modalPresentationStyle = .fullScreen
+            present(homeVC, animated: true, completion: nil)
+        }
+    }
+
+    func showAlertWithAction(message: String, completion: @escaping () -> Void) {
+        let alert = UIAlertController(title: "Bilgi", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Tamam", style: .default) { _ in
+            completion()
+        })
+        present(alert, animated: true)
+    }
+
     
 }

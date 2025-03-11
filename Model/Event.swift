@@ -20,9 +20,9 @@ class Event : Codable {
     var eventCategory : Category?
     var isFavorite: Bool
    
+   
     
-    
-    init(eventID: String, eventName: String, eventDate: String, eventLocation: String, eventType: String, eventImage: String, eventPrice: String, artistName: String, eventCategory: Category , isFavorite: Bool) {
+    init(eventID: String, eventName: String, eventDate: String, eventLocation: String, eventType: String, eventImage: String, eventPrice: String, artistName: String, eventCategory: Category , isFavorite: Bool ) {
         self.eventID = eventID
         self.eventName = eventName
         self.eventDate = eventDate
@@ -35,3 +35,6 @@ class Event : Codable {
         self.isFavorite   = isFavorite
     }
 }
+
+
+
