@@ -174,7 +174,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             
             let body: [String: Any] = [
-                "userID": user.userPhoneNumber ?? "",
+                
                 "userName": user.userName ?? "",
                 "userSurname": user.userSurname ?? "",
                 "userEmail": user.userEmail ?? "",
@@ -208,14 +208,13 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
                     
                     if let data = data {
                         do {
-                            let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
-                            print("Response: \(jsonResponse)")
-                            
                             if httpResponse.statusCode == 200 {
                                 self.showAlertWithAction(message: "Üyelik başarılı! Giriş ekranına yönlendiriliyorsunuz.") {
                                     self.navigateToLoginScreen()
                                 }
                             } else {
+                                let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                                print("Response: \(jsonResponse)")
                                 self.showAlert(message: "Kayıt başarısız: \(jsonResponse)")
                             }
                         } catch {
@@ -257,6 +256,5 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate , UIPickerVi
         })
         present(alert, animated: true)
     }
-
 
 }

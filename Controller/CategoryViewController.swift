@@ -25,7 +25,7 @@ class CategoryViewController: UIViewController {
     }
     
     func fetchCategories(){
-        let urlString = "https://api.example.com/categories"
+        let urlString = "http://localhost:8080/category/getAll"
             guard let url = URL(string: urlString) else { return }
             
             URLSession.shared.dataTask(with: url) { data, _, error in
@@ -68,11 +68,8 @@ extension CategoryViewController :  UICollectionViewDelegate , UICollectionViewD
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCategory = filteredCategories[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let categoryDetailVC  = storyboard.instantiateViewController(withIdentifier: "CategoryDetailVC") as? CategoryDetailViewController {
-            categoryDetailVC.selectedCategory = selectedCategory
-            navigationController?.pushViewController(categoryDetailVC, animated: true)
-        }
+        performSegue(withIdentifier: "toCategoryDetail", sender: selectedCategory)
+
             
     }
     
@@ -83,6 +80,12 @@ extension CategoryViewController :  UICollectionViewDelegate , UICollectionViewD
             filteredCategories = categories.filter { ($0.categoryName ?? "").lowercased().contains(searchText.lowercased()) }
         }
         CategoryCollectionView.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCategoryDetail",
+           let destinationVC = segue.destination as? CategoryDetailViewController {
+            destinationVC.selectedCategory = sender as? Category
+        }
     }
 }
 

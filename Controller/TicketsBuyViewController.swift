@@ -48,7 +48,6 @@ class TicketsBuyViewController: UIViewController {
                         }
                     }
                 }
-        
     }
     
     func updateTotalPrice(){

@@ -91,6 +91,18 @@ class LoginViewController: UIViewController {
                     }
         do {
                     let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+               let userId = json["userID"] as? String {
+                 
+                 SessionManager.shared.userId = String(userId)
+                 
+                 
+                 print("User ID: \(userId)")
+             } else {
+                 print("JSON parse edilemedi veya userID yok")
+             }
+            
                     print("Response: \(jsonResponse)")
 
                 switch httpResponse.statusCode {
@@ -125,12 +137,11 @@ class LoginViewController: UIViewController {
     }
     func navigateToHomeScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as? ViewController {
-            homeVC.modalPresentationStyle = .fullScreen
-            present(homeVC, animated: true, completion: nil)
+        if let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarControllerID") as? UITabBarController {
+            tabBarVC.modalPresentationStyle = .fullScreen
+            self.present(tabBarVC, animated: true, completion: nil)
         }
     }
-
     func showAlertWithAction(message: String, completion: @escaping () -> Void) {
         let alert = UIAlertController(title: "Bilgi", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Tamam", style: .default) { _ in

@@ -22,7 +22,7 @@ class User : Codable {
     init(){
     }
     
-    init(userID: String , userName: String , userSurname: String , userEmail: String , userPassword: String , countryCode : String, userPhoneNumber: String , userGender: String , userBirthDate: Date ) {
+    init(userID: String, userName: String , userSurname: String , userEmail: String , userPassword: String , countryCode : String, userPhoneNumber: String , userGender: String , userBirthDate: Date ) {
         self.userID = userID
         self.userName = userName
         self.userSurname = userSurname

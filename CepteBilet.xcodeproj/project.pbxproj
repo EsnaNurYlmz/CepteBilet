@@ -41,6 +41,7 @@
 		C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */; };
 		C68CE01A2D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */; };
 		C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */; };
+		C6D66FAF2DAAA6C30016DED8 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D66FAE2DAAA6C30016DED8 /* SessionManager.swift */; };
 		C6FE2E642D106624007B506F /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */; };
 		C6FE2E662D106636007B506F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E652D106636007B506F /* FavoriteViewController.swift */; };
 		C6FE2E682D106E6C007B506F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE2E672D106E6C007B506F /* TicketsViewController.swift */; };
@@ -103,6 +104,7 @@
 		C68CE00A2D072A740060AC86 /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
 		C68CE0192D08535C0060AC86 /* HomePageAdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageAdvertCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6C030552D0706DF003C4EC9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C6D66FAE2DAAA6C30016DED8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		C6FE2E632D106624007B506F /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6FE2E652D106636007B506F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		C6FE2E672D106E6C007B506F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				C682A3172D516AB300C6CFB9 /* Event.swift */,
 				C682A3192D516EB500C6CFB9 /* Review.swift */,
 				C682A31B2D5170AC00C6CFB9 /* Filter.swift */,
+				C6D66FAE2DAAA6C30016DED8 /* SessionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				C68CE00B2D072A740060AC86 /* ProfileUpdateViewController.swift in Sources */,
 				C682A31C2D5170AC00C6CFB9 /* Filter.swift in Sources */,
 				C62A2B8B2D12CBFA00D369D7 /* ReviewTableViewCell.swift in Sources */,
+				C6D66FAF2DAAA6C30016DED8 /* SessionManager.swift in Sources */,
 				C643EC9F2D0A196800CB0424 /* DetailViewController.swift in Sources */,
 				C6C030562D0706DF003C4EC9 /* ProfileViewController.swift in Sources */,
 				C68CE0052D07144F0060AC86 /* ProfileCategoryTableViewCell.swift in Sources */,

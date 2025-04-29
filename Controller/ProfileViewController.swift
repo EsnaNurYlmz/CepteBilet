@@ -38,7 +38,7 @@ extension ProfileViewController: UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seçilen Satır: \(indexPath.row)")
+       // print("Seçilen Satır: \(indexPath.row)")
         ProfileCategoryTableView.deselectRow(at: indexPath, animated: true)
         
         switch indexPath.row {

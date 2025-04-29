@@ -85,4 +85,7 @@ extension CategoryDetailViewController : UICollectionViewDelegate , UICollection
         let selectedEvent = events[indexPath.row]
         performSegue(withIdentifier: "toEventDetail", sender: selectedEvent)
     }
+    
+
+        
 }

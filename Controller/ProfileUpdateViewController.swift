@@ -19,16 +19,14 @@ class ProfileUpdateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func profileUpdateTapped(_ sender: UIButton) {
-        guard let userId = userId else {
-            showAlert(title: "Hata", message: "Kullanıcı ID bulunamadı")
-            return
-        }
+
         
         let updateUser = User()
-        updateUser.userID = userId
+        updateUser.userID = SessionManager.shared.userId;
         updateUser.userName = newNameTextField.text?.isEmpty == false ? newNameTextField.text : nil
         updateUser.userSurname = newSurnameTextField.text?.isEmpty == false ? newSurnameTextField.text : nil
         updateUser.countryCode = newCountryCodeTextField.text?.isEmpty == false ? newCountryCodeTextField.text : nil
@@ -37,8 +35,9 @@ class ProfileUpdateViewController: UIViewController {
     }
     
     @IBAction func passwordUpdateTapped(_ sender: UIButton) {
-        guard let userId = userId else {
-            showAlert(title: "Hata", message: "Kullanıcı ID bulunamadı")
+        
+        guard let userId = SessionManager.shared.userId , !userId.isEmpty else {
+            showAlert(title: "Hata", message: "user ID boş.")
             return
         }
         guard let newPassword = newPasswordTextField.text , !newPassword.isEmpty else {
@@ -49,7 +48,7 @@ class ProfileUpdateViewController: UIViewController {
     }
      
     func updateUserProfile( user : User ) {
-        let url = URL(string: "https://yourapi.com/api/users/update")!
+        let url = URL(string: "http://localhost:8080/user/update")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -85,14 +84,14 @@ class ProfileUpdateViewController: UIViewController {
     
     func updateUserPassword( userId : String , newPassword : String){
         
-        let url = URL(string: "https://yourapi.com/api/users/updatePassword")!
+        let url = URL(string: "http://localhost:8080/user/updatePass")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let passwordUpdateData: [String: Any] = [
                     "userID": userId,
-                    "newPassword": newPassword
+                    "userPassword": newPassword
                 ]
         do {
                     let jsonData = try JSONSerialization.data(withJSONObject: passwordUpdateData, options: [])

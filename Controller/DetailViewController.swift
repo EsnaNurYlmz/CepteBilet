@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
     }
     
     func fetchEventDetails(eventID : String) {
-        let urlString = "https://api.example.com/events/\(eventID)"
+        let urlString = "http://localhost:8080/event/category/\(eventID)"
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data , _, error  in
