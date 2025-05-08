@@ -42,7 +42,10 @@ class DetailViewController: UIViewController {
                 return
             }
             do {
+                print(String(data: data, encoding: .utf8) ?? "Veri okunamadı")
                             let eventDetails = try JSONDecoder().decode(Event.self, from: data)
+                
+
                             DispatchQueue.main.async {
                                 self.event = eventDetails
                                 self.updateUI()
@@ -73,6 +76,15 @@ class DetailViewController: UIViewController {
                 }
     }
     @IBAction func TicketBuyButton(_ sender: Any) {
+       performSegue(withIdentifier: "toTicketsBuy", sender: nil)
     }
+    
+    @IBAction func favoriteClicked(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func locationClicked(_ sender: UIBarButtonItem) {
+    }
+    
+    
     
 }

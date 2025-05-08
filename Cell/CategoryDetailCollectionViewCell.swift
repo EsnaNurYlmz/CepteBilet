@@ -25,7 +25,7 @@ class CategoryDetailCollectionViewCell: UICollectionViewCell {
         categoryDetailDate.text = event.eventDate
         categoryDetailType.text = event.eventType
         categoryDetailLocation.text = event.eventLocation
-        isfavorite = event.isFavorite
+        //isfavorite = event.favorite
         
         updateFavoriteButton()
         

@@ -25,10 +25,14 @@ class CategoryDetailViewController: UIViewController {
         fetchEvent()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     func fetchEvent(){
-        guard let category = selectedCategory?.categoryName else { return}
-        let urlString = "https://api.example.com/events?category=\(category)"
+        guard let category = selectedCategory?.categoryID else { return}
+        let urlString = "http://localhost:8080/event/category/\(category)"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { data , _, error in
             if let error = error {
@@ -75,7 +79,7 @@ extension CategoryDetailViewController : UICollectionViewDelegate , UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = CategoryDetailEventCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryDetailCell", for: indexPath) as! CategoryDetailCollectionViewCell
+        let cell = CategoryDetailEventCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryDetailCell", for: indexPath) as! CategoryDetailCollectionViewCell
         let event = events[indexPath.row]
         cell.configure(with : event)
         return cell

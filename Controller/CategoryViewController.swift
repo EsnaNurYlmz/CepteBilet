@@ -9,7 +9,7 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     
-    @IBOutlet weak var CategorySearchBar: UISearchBar!
+    
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
     
     var categories : [Category] = []
@@ -20,7 +20,6 @@ class CategoryViewController: UIViewController {
          
         CategoryCollectionView.delegate = self
         CategoryCollectionView.dataSource  = self
-        CategorySearchBar.delegate = self
         fetchCategories()
     }
     

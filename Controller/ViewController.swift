@@ -8,14 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
     @IBOutlet weak var advertCollectionView: UICollectionView!
-    @IBOutlet weak var HomePageMusicCollectionView: UICollectionView!
-    @IBOutlet weak var HomePageTheatreCollectionView: UICollectionView!
+    //    @IBOutlet weak var HomePageMusicCollectionView: UICollectionView!
+  //  @IBOutlet weak var HomePageTheatreCollectionView: UICollectionView!
     
-    @IBOutlet weak var HomePageSportCollectionView: UICollectionView!
-    
-    @IBOutlet weak var HomePageCategoryCollectionView: UICollectionView!
+   // @IBOutlet weak var HomePageSportCollectionView: UICollectionView!
     
     let advert = ["advert2","advert3","advert4","advert6","advert5","advert7"]
     
@@ -24,8 +22,6 @@ class ViewController: UIViewController {
         advertCollectionView.delegate = self
         advertCollectionView.dataSource = self
     }
-
-
 }
 extension ViewController: UICollectionViewDelegate , UICollectionViewDataSource {
     

@@ -17,12 +17,12 @@ class Event : Codable {
     let eventImage : String?
     let eventPrice : String?
     let artistName : String?
-    var eventCategory : Category?
-    var isFavorite: Bool
+    var eventCategory : String?
+    
    
    
     
-    init(eventID: String, eventName: String, eventDate: String, eventLocation: String, eventType: String, eventImage: String, eventPrice: String, artistName: String, eventCategory: Category , isFavorite: Bool ) {
+    init(eventID: String, eventName: String, eventDate: String, eventLocation: String, eventType: String, eventImage: String, eventPrice: String, artistName: String, eventCategory: String  ) {
         self.eventID = eventID
         self.eventName = eventName
         self.eventDate = eventDate
@@ -32,7 +32,7 @@ class Event : Codable {
         self.eventPrice = eventPrice
         self.artistName = artistName
         self.eventCategory = eventCategory
-        self.isFavorite   = isFavorite
+        
     }
 }
 
