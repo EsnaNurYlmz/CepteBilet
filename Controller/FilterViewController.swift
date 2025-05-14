@@ -9,6 +9,9 @@ import UIKit
 
 class FilterViewController: UIViewController {
 
+    var selectedCategory: Category?
+    var events: [Event] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -22,18 +22,22 @@ class FavoriteViewController: UIViewController, FavoriteCollectionViewCellDelega
         
     }
     
-    func fetchFavoriteEvents(){
+    func fetchFavoriteEvents() {
+        guard let userId = SessionManager.shared.userId else {
+            print("Kullanıcı ID bulunamadı")
+            return
+        }
         
-        let urlString = "https://api.example.com/favorites"
-        guard let url = URL(string: urlString) else {return}
+        let urlString = "https://api.example.com/favorites/user/\(userId)"
+        guard let url = URL(string: urlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { data , _ , error in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
                 print("Ağ Hatası: \(error.localizedDescription)")
                 return
             }
             guard let data = data else {
-                print ("Hata: Veri alınamadı")
+                print("Veri alınamadı")
                 return
             }
             do {
@@ -42,13 +46,12 @@ class FavoriteViewController: UIViewController, FavoriteCollectionViewCellDelega
                     self.favoriteEvent = favorites
                     self.favoriteCollectionView.reloadData()
                 }
-            }catch{
+            } catch {
                 print("JSON Çözümleme Hatası: \(error.localizedDescription)")
-                
             }
-            
         }.resume()
     }
+
     func didTapBuyTicket(event: Event) {
         performSegue(withIdentifier: "toFavoriteBuyTicket", sender: event)
     }

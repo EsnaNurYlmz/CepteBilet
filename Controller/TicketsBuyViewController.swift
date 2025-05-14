@@ -26,14 +26,18 @@ class TicketsBuyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        if let event = event {
+                    updateUI(with: event)
+        }
     }
+    
     func updateUI(with event : Event){
         
         eventNameLabel.text = event.eventName
         eventDateLabel.text = event.eventDate
         artistNameLabel.text = event.artistName
+        serviceFeeLabel.text = String(format: "%.2f TL", serviceFee)
+
         
         if let priceString = event.eventPrice, let price = Double(priceString) {
                    ticketPriceLabel.text = String(format: "%.2f TL", price)
@@ -49,16 +53,14 @@ class TicketsBuyViewController: UIViewController {
                     }
                 }
     }
-    
-    func updateTotalPrice(){
-        if let priceString = event?.eventPrice, let price = Double(priceString) {
-                   let totalTicketPrice = Double(ticketCount) * price
-                   let finalPrice = totalTicketPrice + serviceFee
-                   
-                   ticketCountLabel.text = "\(ticketCount)"
-                   totalPriceLabel.text = String(format: "%.2f TL", finalPrice)
-               }
-    }
+    func updateTotalPrice() {
+            if let priceString = event?.eventPrice,
+               let price = Double(priceString) {
+                let total = Double(ticketCount) * price + serviceFee
+                totalPriceLabel.text = String(format: "%.2f TL", total)
+                ticketCountLabel.text = "\(ticketCount)"
+            }
+        }
 
     @IBAction func PlusCountButton(_ sender: UIButton) {
         ticketCount += 1
@@ -73,14 +75,17 @@ class TicketsBuyViewController: UIViewController {
     }
     
     @IBAction func proceedToPayment(_ sender: UIButton) {
-        
-        let totalPriceText = totalPriceLabel.text?.replacingOccurrences(of: " TL", with: "") ?? "0"
-        let totalPriceDouble = Double(totalPriceText) ?? 0.0
-
-        if let paymentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController {
-            paymentVC.totalAmount = totalPriceDouble
-            self.navigationController?.pushViewController(paymentVC, animated: true)
-        }
+        performSegue(withIdentifier: "toPaymentVC", sender: nil)
 
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPaymentVC",
+           let paymentVC = segue.destination as? PaymentViewController {
+            
+            let totalPriceText = totalPriceLabel.text?.replacingOccurrences(of: " TL", with: "") ?? "0"
+            let totalPriceDouble = Double(totalPriceText) ?? 0.0
+            paymentVC.totalAmount = totalPriceDouble
+        }
+    }
+
 }

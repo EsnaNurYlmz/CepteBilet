@@ -63,9 +63,15 @@ class CategoryDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toEventDetail",
            let destinationVC = segue.destination as? DetailViewController,
-                  let selectedEvent = sender as? Event {
-                   destinationVC.eventID = selectedEvent.eventID
-               }
+           let selectedEvent = sender as? Event {
+            destinationVC.eventID = selectedEvent.eventID
+        }
+        
+        else if segue.identifier == "toDetailFilter",
+                let destinationVC = segue.destination as? FilterViewController {
+            destinationVC.selectedCategory = selectedCategory
+            destinationVC.events = events
+        }
     }
 }
 extension CategoryDetailViewController : UICollectionViewDelegate , UICollectionViewDataSource {

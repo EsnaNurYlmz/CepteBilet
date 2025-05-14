@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uoy-oR-042">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="av1-IZ-9K9">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -16,7 +16,7 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K2g-5E-65j" customClass="LoginViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whp-BJ-qNX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-DP-RCO">
@@ -91,14 +91,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIy-Lt-eHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14875.572519083969" y="-82.394366197183103"/>
+            <point key="canvasLocation" x="15802.290076335878" y="-82.394366197183103"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="nHc-rE-SrY">
             <objects>
                 <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3me-bB-J0d" customClass="SignUpViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uNs-Rj-HsM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uc8-gE-ebx">
@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWv-eg-UWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15825.190839694656" y="-82.394366197183103"/>
+            <point key="canvasLocation" x="16751.908396946565" y="-82.394366197183103"/>
         </scene>
         <!--Privacy Policy View Controller-->
         <scene sceneID="hrF-gq-6bX">
@@ -344,7 +344,7 @@ Cepte Bilet</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hl8-xh-Dkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16718.320610687024" y="-82.394366197183103"/>
+            <point key="canvasLocation" x="17645.038167938932" y="-82.394366197183103"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
@@ -354,35 +354,31 @@ Cepte Bilet</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-7c-qie">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="265"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-7c-qie">
+                                <rect key="frame" x="0.0" y="90" width="377" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e62-Ve-oCf">
-                                    <size key="itemSize" width="392" height="154"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e62-Ve-oCf">
+                                    <size key="itemSize" width="336" height="151"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdvertCell" id="g2u-AN-Ji2" customClass="HomePageAdvertCollectionViewCell" customModule="CepteBilet" customModuleProvider="target">
-                                        <rect key="frame" x="0.66666666666666663" y="0.0" width="392" height="154"/>
+                                        <rect key="frame" x="0.0" y="-0.66666666666666663" width="336" height="151"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mCx-Ar-NPr">
-                                            <rect key="frame" x="0.0" y="0.0" width="392" height="154"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-pg-zxT">
-                                                    <rect key="frame" x="2" y="2" width="388" height="150"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-pg-zxT">
+                                                    <rect key="frame" x="171" y="11" width="64" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Ahc-pg-zxT" secondAttribute="trailing" constant="2" id="B0r-WF-UOw"/>
-                                                <constraint firstItem="Ahc-pg-zxT" firstAttribute="leading" secondItem="mCx-Ar-NPr" secondAttribute="leading" constant="2" id="UfQ-Gb-Z4t"/>
-                                                <constraint firstItem="Ahc-pg-zxT" firstAttribute="top" secondItem="mCx-Ar-NPr" secondAttribute="top" constant="2" id="YSx-Pr-8d7"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ahc-pg-zxT" secondAttribute="bottom" constant="2" id="YeX-g6-4sX"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="392" height="154"/>
+                                        <size key="customSize" width="336" height="151"/>
                                         <connections>
                                             <outlet property="advertImage" destination="Ahc-pg-zxT" id="H8B-R4-WEH"/>
                                         </connections>
@@ -392,12 +388,6 @@ Cepte Bilet</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fhh-7c-qie" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AfN-Rg-0lX"/>
-                            <constraint firstItem="fhh-7c-qie" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BBB-ly-lve"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fhh-7c-qie" secondAttribute="trailing" id="TQc-EL-soy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fhh-7c-qie" secondAttribute="bottom" constant="470" id="fbe-A8-AFU"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Anasayfa" image="house" catalog="system" id="ADw-i9-S9q"/>
                     <navigationItem key="navigationItem" id="Iix-wx-GhT"/>
@@ -407,7 +397,7 @@ Cepte Bilet</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1019.0839694656488" y="89.436619718309871"/>
+            <point key="canvasLocation" x="-1103.0534351145038" y="31.690140845070424"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="sKi-Tb-dlq">
@@ -888,22 +878,22 @@ Cepte Bilet</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-qp-vhf">
-                                <rect key="frame" x="10" y="212" width="373" height="113"/>
+                                <rect key="frame" x="10" y="109" width="373" height="216"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ag-FJ-3J1">
-                                        <rect key="frame" x="10" y="20" width="133" height="73"/>
+                                        <rect key="frame" x="10" y="20" width="133" height="176"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" id="WXs-As-t4j"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="etkinlik adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGx-K4-sis">
-                                        <rect key="frame" x="153" y="30" width="210" height="20.333333333333329"/>
+                                        <rect key="frame" x="153" y="30" width="210" height="72"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sanatçı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kln-AW-MvV">
-                                        <rect key="frame" x="153" y="60.333333333333314" width="210" height="26"/>
+                                        <rect key="frame" x="153" y="112" width="210" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="175-x6-z4X"/>
                                         </constraints>
@@ -912,7 +902,7 @@ Cepte Bilet</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarih" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-gK-wVj">
-                                        <rect key="frame" x="153" y="96.333333333333314" width="210" height="26"/>
+                                        <rect key="frame" x="153" y="148" width="210" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Dyi-dz-30y"/>
                                         </constraints>
@@ -939,7 +929,7 @@ Cepte Bilet</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3I-G6-0cZ">
-                                <rect key="frame" x="10" y="345" width="373" height="290"/>
+                                <rect key="frame" x="10" y="345" width="373" height="373"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hizmet Bedeli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1k-IQ-FuK">
                                         <rect key="frame" x="188" y="18" width="110.33333333333331" height="21"/>
@@ -1076,7 +1066,7 @@ Cepte Bilet</string>
                         <outlet property="ticketCountLabel" destination="kxm-KA-rkH" id="qaV-Ji-NRJ"/>
                         <outlet property="ticketPriceLabel" destination="cpk-x1-LyV" id="NUc-z6-lHu"/>
                         <outlet property="totalPriceLabel" destination="fR1-3Y-GNI" id="1Hr-ax-ced"/>
-                        <segue destination="z61-OL-fS2" kind="show" id="fNv-kX-BHl"/>
+                        <segue destination="z61-OL-fS2" kind="show" identifier="toPaymentVC" id="fNv-kX-BHl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3P8-XZ-zqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1092,35 +1082,35 @@ Cepte Bilet</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-go-iO9">
-                                <rect key="frame" x="10" y="196.99999999999997" width="373" height="316.33333333333326"/>
+                                <rect key="frame" x="10" y="94" width="373" height="361"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KART NUMARASI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4y-vs-pDh">
-                                        <rect key="frame" x="20" y="20" width="249" height="20.333333333333329"/>
+                                        <rect key="frame" x="20" y="20" width="249" height="63"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83A-0u-67p">
-                                        <rect key="frame" x="20" y="102.33333333333331" width="69" height="0.0"/>
+                                        <rect key="frame" x="20" y="145" width="69" height="2"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-IN-fsj">
-                                        <rect key="frame" x="100" y="102.33333333333331" width="69" height="0.0"/>
+                                        <rect key="frame" x="100" y="145" width="69" height="2"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-aD-Pio">
-                                        <rect key="frame" x="180" y="102.33333333333331" width="69" height="0.0"/>
+                                        <rect key="frame" x="180" y="145" width="69" height="2"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0s-l8-ARZ">
-                                        <rect key="frame" x="260" y="102.33333333333331" width="69" height="0.0"/>
+                                        <rect key="frame" x="260" y="145" width="69" height="2"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="enj-r0-yg3">
-                                        <rect key="frame" x="329" y="19" width="34" height="21.333333333333336"/>
+                                        <rect key="frame" x="329" y="19" width="34" height="66"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-qe-XsR">
-                                        <rect key="frame" x="126.99999999999999" y="136" width="35.333333333333329" height="20.333333333333343"/>
+                                        <rect key="frame" x="126.99999999999999" y="180.66666666666669" width="35.333333333333329" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1131,13 +1121,13 @@ Cepte Bilet</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0c-lm-j6g">
-                                        <rect key="frame" x="329" y="158.33333333333331" width="27" height="26"/>
+                                        <rect key="frame" x="329" y="203" width="27" height="26"/>
                                         <color key="tintColor" systemColor="tableCellBlueTextColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="questionmark.circle" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKO-Ec-Buz">
-                                        <rect key="frame" x="10" y="232.33333333333331" width="24" height="26"/>
+                                        <rect key="frame" x="10" y="277" width="24" height="26"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" cornerStyle="small">
                                             <color key="baseBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
@@ -1147,7 +1137,7 @@ Cepte Bilet</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ön Bilgilendirme Koşullarını ve Mesafeli Satış Sözleşmesini Okudum." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jli-io-4iW">
-                                        <rect key="frame" x="42" y="232.33333333333331" width="323" height="30"/>
+                                        <rect key="frame" x="42" y="277" width="323" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="323" id="1VA-9R-7xn"/>
                                             <constraint firstAttribute="height" constant="30" id="C1A-fS-M7g"/>
@@ -1157,7 +1147,7 @@ Cepte Bilet</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnu-t9-Hgg">
-                                        <rect key="frame" x="10" y="270.33333333333331" width="24" height="26"/>
+                                        <rect key="frame" x="10" y="315" width="24" height="26"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" cornerStyle="small">
                                             <color key="baseBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
@@ -1167,7 +1157,7 @@ Cepte Bilet</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurumsal Fatura istiyorum" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yk-mJ-nJe">
-                                        <rect key="frame" x="42" y="270.33333333333331" width="323" height="28.666666666666686"/>
+                                        <rect key="frame" x="42" y="315" width="323" height="28.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="323" id="FPu-Ff-kuz"/>
                                         </constraints>
@@ -1176,12 +1166,12 @@ Cepte Bilet</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5i-80-VVY">
-                                        <rect key="frame" x="20" y="166.33333333333331" width="71" height="32"/>
+                                        <rect key="frame" x="20" y="211" width="71" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmB-Cx-HNv">
-                                        <rect key="frame" x="32" y="136" width="22" height="20.333333333333343"/>
+                                        <rect key="frame" x="32" y="180.66666666666669" width="22" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1243,7 +1233,7 @@ Cepte Bilet</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RO-xS-HUo">
-                                <rect key="frame" x="10" y="537.33333333333337" width="373" height="166"/>
+                                <rect key="frame" x="10" y="479" width="373" height="166"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.80 TL Hizmet Bedeli Uygulanmıştır" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmL-76-VBw">
                                         <rect key="frame" x="10" y="20" width="353" height="16"/>
@@ -1331,16 +1321,30 @@ Cepte Bilet</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knI-vO-RoX">
-                                <rect key="frame" x="0.0" y="188" width="393" height="547"/>
+                                <rect key="frame" x="0.0" y="183" width="393" height="552"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-rF-jMS">
-                                <rect key="frame" x="0.0" y="132" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="132" width="393" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="av1-IZ-9K9" id="Jsd-hi-ABl"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-Vr-AA0">
+                                <rect key="frame" x="338" y="706" width="55" height="29"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1Jh-Wt-SMY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GİT">
+                                    <color key="baseForegroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="routeButtonTapped:" destination="av1-IZ-9K9" eventType="touchUpInside" id="tgL-QE-dgS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0dZ-QP-xh7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1349,7 +1353,11 @@ Cepte Bilet</string>
                             <constraint firstItem="knI-vO-RoX" firstAttribute="top" secondItem="xRg-rF-jMS" secondAttribute="bottom" id="GUB-mN-IIK"/>
                             <constraint firstItem="knI-vO-RoX" firstAttribute="bottom" secondItem="0dZ-QP-xh7" secondAttribute="bottom" id="GqC-v4-XS8"/>
                             <constraint firstItem="knI-vO-RoX" firstAttribute="top" secondItem="xRg-rF-jMS" secondAttribute="bottom" id="Inm-8k-ohR"/>
+                            <constraint firstItem="YaH-Vr-AA0" firstAttribute="top" secondItem="xRg-rF-jMS" secondAttribute="bottom" constant="523" id="bag-Um-ged"/>
+                            <constraint firstItem="YaH-Vr-AA0" firstAttribute="leading" secondItem="0dZ-QP-xh7" secondAttribute="leading" constant="338" id="bzW-1P-NN4"/>
+                            <constraint firstItem="YaH-Vr-AA0" firstAttribute="trailing" secondItem="0dZ-QP-xh7" secondAttribute="trailing" id="chk-pb-KCS"/>
                             <constraint firstItem="knI-vO-RoX" firstAttribute="leading" secondItem="0dZ-QP-xh7" secondAttribute="leading" id="dG3-o2-CAZ"/>
+                            <constraint firstItem="YaH-Vr-AA0" firstAttribute="bottom" secondItem="0dZ-QP-xh7" secondAttribute="bottom" id="ee9-rz-Yov"/>
                             <constraint firstItem="xRg-rF-jMS" firstAttribute="top" secondItem="0dZ-QP-xh7" secondAttribute="top" constant="14" id="g3g-2x-yOM"/>
                             <constraint firstItem="knI-vO-RoX" firstAttribute="trailing" secondItem="0dZ-QP-xh7" secondAttribute="trailing" id="hpu-Bl-Sk1"/>
                             <constraint firstItem="xRg-rF-jMS" firstAttribute="leading" secondItem="0dZ-QP-xh7" secondAttribute="leading" id="wOM-0e-Qqk"/>
@@ -1359,6 +1367,7 @@ Cepte Bilet</string>
                     <connections>
                         <outlet property="LocationSearchBar" destination="xRg-rF-jMS" id="l8H-uV-Hl6"/>
                         <outlet property="MapView" destination="knI-vO-RoX" id="RUC-m7-2ge"/>
+                        <outlet property="routeButton" destination="YaH-Vr-AA0" id="bGd-fl-Qaw"/>
                         <segue destination="pEq-6u-Mjh" kind="show" id="9Tt-jY-OBJ"/>
                     </connections>
                 </viewController>
@@ -1475,7 +1484,7 @@ Cepte Bilet</string>
             </objects>
             <point key="canvasLocation" x="10432.824427480915" y="176.7605633802817"/>
         </scene>
-        <!--Hesabım-->
+        <!--Profile View Controller-->
         <scene sceneID="x1I-KQ-v8G">
             <objects>
                 <viewController id="ClN-h7-LeA" customClass="ProfileViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
@@ -1484,7 +1493,7 @@ Cepte Bilet</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0NQ-sZ-s8J">
-                                <rect key="frame" x="0.0" y="118" width="393" height="118"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="74"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-w5-Xyp">
                                 <rect key="frame" x="0.0" y="236" width="393" height="499"/>
@@ -1494,14 +1503,14 @@ Cepte Bilet</string>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="tableCellBlueTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCategoryCell" id="FYe-EF-puN" customClass="ProfileCategoryTableViewCell" customModule="CepteBilet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="50.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYe-EF-puN" id="sw3-i9-s9W">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-vZ-2Z3">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="27.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="27.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
                                                     <color key="textColor" systemColor="tableCellBlueTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1537,7 +1546,6 @@ Cepte Bilet</string>
                             <constraint firstItem="rM7-w5-Xyp" firstAttribute="leading" secondItem="LQb-4l-jxJ" secondAttribute="leading" id="pbd-tt-ukt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hesabım" image="person.circle" catalog="system" id="n3M-Q0-ue3"/>
                     <navigationItem key="navigationItem" id="mO4-V4-tmX"/>
                     <connections>
                         <outlet property="ProfileCategoryTableView" destination="rM7-w5-Xyp" id="k2t-ZW-kJR"/>
@@ -1548,34 +1556,34 @@ Cepte Bilet</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPk-ig-Ha4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13408.396946564884" y="177.46478873239437"/>
+            <point key="canvasLocation" x="14335.114503816792" y="177.46478873239437"/>
         </scene>
         <!--Profile Update View Controller-->
         <scene sceneID="VYO-Vl-usU">
             <objects>
                 <viewController storyboardIdentifier="ProfileUpdateVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="636-EM-fST" customClass="ProfileUpdateViewController" customModule="CepteBilet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="plk-Ga-ful">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil Güncelleme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz8-bM-9IJ">
-                                <rect key="frame" x="0.0" y="69" width="393" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="172" width="393" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" systemColor="tableCellBlueTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Lp-CP-hLj">
-                                <rect key="frame" x="10" y="109.33333333333333" width="373" height="33.999999999999986"/>
+                                <rect key="frame" x="10" y="212.33333333333334" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Soyad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2MV-Kd-B5s">
-                                <rect key="frame" x="10" y="168.33333333333334" width="373" height="34"/>
+                                <rect key="frame" x="10" y="271.33333333333331" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ülke Kodu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-nA-1L1">
-                                <rect key="frame" x="10" y="227.33333333333334" width="93.666666666666671" height="34.000000000000028"/>
+                                <rect key="frame" x="10" y="330.33333333333331" width="93.666666666666671" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93.666666666666671" id="UN7-g8-jlC"/>
                                 </constraints>
@@ -1583,7 +1591,7 @@ Cepte Bilet</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM1-pG-WX4">
-                                <rect key="frame" x="232" y="295.33333333333331" width="151" height="35"/>
+                                <rect key="frame" x="232" y="398.33333333333331" width="151" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Profil Güncelle"/>
                                 <connections>
@@ -1591,7 +1599,7 @@ Cepte Bilet</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-sa-lwQ">
-                                <rect key="frame" x="238" y="512.66666666666663" width="145" height="35"/>
+                                <rect key="frame" x="238" y="615.66666666666663" width="145" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Şifre Güncelle"/>
                                 <connections>
@@ -1599,18 +1607,18 @@ Cepte Bilet</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre Güncelleme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1c-fH-Ioc">
-                                <rect key="frame" x="0.0" y="393.33333333333331" width="393" height="20.333333333333314"/>
+                                <rect key="frame" x="0.0" y="496.33333333333331" width="393" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" systemColor="tableCellBlueTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="097-aM-Is2">
-                                <rect key="frame" x="10" y="458.66666666666669" width="373" height="34"/>
+                                <rect key="frame" x="10" y="561.66666666666663" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefon Numarası" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjx-Zc-jdn">
-                                <rect key="frame" x="126" y="227.33333333333334" width="257" height="34.000000000000028"/>
+                                <rect key="frame" x="126" y="330.33333333333331" width="257" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1660,7 +1668,7 @@ Cepte Bilet</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqW-gH-tew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14875.572519083969" y="645.77464788732402"/>
+            <point key="canvasLocation" x="15802.290076335878" y="645.77464788732402"/>
         </scene>
         <!--Tickets View Controller-->
         <scene sceneID="pdD-bS-huj">
@@ -1958,7 +1966,7 @@ Cepte Bilet</string>
                         <segue destination="BZg-bc-sxc" kind="relationship" relationship="viewControllers" id="ftY-Pb-DB0"/>
                         <segue destination="av1-IZ-9K9" kind="relationship" relationship="viewControllers" id="HkW-8r-gaP"/>
                         <segue destination="kUF-fe-fgk" kind="relationship" relationship="viewControllers" id="5aL-We-J3a"/>
-                        <segue destination="ClN-h7-LeA" kind="relationship" relationship="viewControllers" id="0UH-sY-9Qj"/>
+                        <segue destination="yfy-hT-UYY" kind="relationship" relationship="viewControllers" id="0UH-sY-9Qj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvM-ou-sCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1984,12 +1992,31 @@ Cepte Bilet</string>
             </objects>
             <point key="canvasLocation" x="3692.3664122137402" y="131.69014084507043"/>
         </scene>
+        <!--Hesabım-->
+        <scene sceneID="VRu-3Q-ruJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yfy-hT-UYY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hesabım" image="person.circle" catalog="system" id="n3M-Q0-ue3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TKS-5g-4yr">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ClN-h7-LeA" kind="relationship" relationship="rootViewController" id="h9m-LV-V27"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIO-jU-r5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13408.396946564884" y="177.46478873239437"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aXJ-DN-8c1"/>
+        <segue reference="nM3-9r-mO6"/>
         <segue reference="3Z3-k6-dYq"/>
         <segue reference="hQM-aa-uEg"/>
-        <segue reference="TL8-qA-Dmb"/>
+        <segue reference="9Tt-jY-OBJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="500" height="500"/>
@@ -2027,6 +2054,12 @@ Cepte Bilet</string>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

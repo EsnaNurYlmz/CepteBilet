@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
         if let eventID = eventID {
             fetchEventDetails(eventID: eventID)
         }
+       checkIfFavorite()
     }
     
     func fetchEventDetails(eventID : String) {
@@ -55,11 +56,27 @@ class DetailViewController: UIViewController {
                         }
         }.resume()
     }
+    func checkIfFavorite() {
+        guard let userId = SessionManager.shared.userId,
+              let eventId = event?.eventID else { return }
+
+        let urlString = "http://localhost:8080/favorites/check?userId=\(userId)&eventId=\(eventId)"
+        guard let url = URL(string: urlString) else { return }
+
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            guard let data = data else { return }
+            let isFavorite = String(data: data, encoding: .utf8) == "true"
+            DispatchQueue.main.async {
+                let heartImage = isFavorite ? "heart.fill" : "heart"
+                self.navigationItem.rightBarButtonItem?.image = UIImage(systemName: heartImage)
+                self.navigationItem.rightBarButtonItem?.tintColor = isFavorite ? .red : .black
+            }
+        }.resume()
+    }
     
+    //kullanıcı arayüzü güncelleme
     func updateUI() {
-        
         guard let event = event  else { return }
-        
         eventNameLabel.text = event.eventName
         artistNameLabel.text = event.artistName
         locationLabel.text = event.eventLocation
@@ -78,11 +95,60 @@ class DetailViewController: UIViewController {
     @IBAction func TicketBuyButton(_ sender: Any) {
        performSegue(withIdentifier: "toTicketsBuy", sender: nil)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toTicketsBuy",
+               let destinationVC = segue.destination as? TicketsBuyViewController,
+               let event = self.event {
+                destinationVC.event = event
+            }
+        }
     
     @IBAction func favoriteClicked(_ sender: UIBarButtonItem) {
-    }
+            guard let userId = SessionManager.shared.userId,
+                  let eventId = event?.eventID else {
+                print("Kullanıcı ID veya Etkinlik ID eksik")
+                return
+            }
+
+            let urlString = "http://localhost:8080/favorites"
+            guard let url = URL(string: urlString) else { return }
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            let favoriteData: [String: Any] = [
+                "userId": userId,
+                "eventId": eventId
+            ]
+
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: favoriteData, options: [])
+            } catch {
+                print("JSON encode hatası: \(error.localizedDescription)")
+                return
+            }
+
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Favori ekleme hatası: \(error.localizedDescription)")
+                    return
+                }
+
+                DispatchQueue.main.async {
+                    sender.tintColor = .red 
+                    sender.image = UIImage(systemName: "heart.fill")
+                }
+            }.resume()
+        }
     
     @IBAction func locationClicked(_ sender: UIBarButtonItem) {
+        guard let address = locationLabel.text else { return }
+            
+            let Address = address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            if let url = URL(string: "http://maps.apple.com/?q=\(Address)") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
     }
     
     

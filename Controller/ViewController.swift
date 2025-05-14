@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         advertCollectionView.delegate = self
         advertCollectionView.dataSource = self
+        
+        
+        
+        
+        
     }
 }
 extension ViewController: UICollectionViewDelegate , UICollectionViewDataSource {

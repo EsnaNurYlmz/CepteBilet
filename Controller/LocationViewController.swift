@@ -13,17 +13,30 @@ class LocationViewController: UIViewController , MKMapViewDelegate , CLLocationM
 
     @IBOutlet weak var LocationSearchBar: UISearchBar!
     @IBOutlet weak var MapView: MKMapView!
+    @IBOutlet weak var routeButton: UIButton!
     
     var eventAddress : String?
     let locationManager = CLLocationManager()
     var userLocation : CLLocationCoordinate2D?
-
+    var searchedCoordinate: CLLocationCoordinate2D?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+        self.hidesBottomBarWhenPushed = false
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        MapView.delegate = self
+        LocationSearchBar.delegate = self
+    }
+    
+    @IBAction func routeButtonTapped(_ sender: UIButton) {
+            guard let destinationCoordinate = searchedCoordinate else {
+                print("Henüz arama yapılmadı veya konum bulunamadı.")
+                return
+            }
+            openAppleMaps(with: destinationCoordinate)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
@@ -66,4 +79,39 @@ class LocationViewController: UIViewController , MKMapViewDelegate , CLLocationM
         let options: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
                 MKMapItem.openMaps(with: [userMapItem, destinationMapItem], launchOptions: options)
             }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+        searchBar.resignFirstResponder()  // Klavyeyi kapat
+        geocodeAddressFromSearchBar(searchText)
+    }
+    func geocodeAddressFromSearchBar(_ address: String) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            if let error = error {
+                print("Adres aranırken hata: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let placemark = placemarks?.first, let location = placemark.location else {
+                print("Adres bulunamadı.")
+                return
+            }
+            
+            let coordinate = location.coordinate
+            self.searchedCoordinate = coordinate  // Sonraki adım için kaydediyoruz
+            
+            // Haritada pin göster
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = "Aranan Konum"
+            self.MapView.removeAnnotations(self.MapView.annotations)
+            self.MapView.addAnnotation(annotation)
+            
+            // Harita konumuna odaklan
+            let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            self.MapView.setRegion(region, animated: true)
+        }
+    }
+
 }
