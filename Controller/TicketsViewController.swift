@@ -57,9 +57,9 @@ extension TicketsViewController : UICollectionViewDelegate , UICollectionViewDat
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let commentVC = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as? ReviewViewController {
             commentVC.eventID = event.eventID
+            commentVC.eventName = event.eventName
             navigationController?.pushViewController(commentVC, animated: true)
         }
     }
-
     
 }

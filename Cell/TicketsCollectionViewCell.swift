@@ -23,7 +23,7 @@ class TicketsCollectionViewCell: UICollectionViewCell {
     
     
     func cofigure(with event : Event) {
-        
+        self.event = event
         eventNameLabel.text = event.eventName
         eventDateLabel.text = event.eventDate
         eventLocationLabel.text = event.eventLocation

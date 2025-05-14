@@ -9,7 +9,8 @@ import UIKit
 
 class ReviewViewController: UIViewController {
 
-    var eventID : String?
+    var eventID: String?
+    var eventName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
